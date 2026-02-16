@@ -3,9 +3,7 @@ set GIT_CMD="C:\Users\Tharun Rachabanti\AppData\Local\Programs\Git\cmd\git.exe"
 
 echo Configuring Git...
 %GIT_CMD% config --global user.name "Tharun Rachabanti"
-echo Enter your email address for Git configuration (e.g. yourname@example.com):
-set /p git_email=
-%GIT_CMD% config --global user.email "%git_email%"
+%GIT_CMD% config --global user.email "tharun.rachabanti@example.com"
 
 echo Appending to README...
 echo "# devmatrixlab" >> README.md
