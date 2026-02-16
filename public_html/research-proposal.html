@@ -1,0 +1,1742 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,follow">
+    <meta name="keywords" content="Research Proposal Writing, PhD Proposal Writing, Dissertation Proposal Help, Thesis Proposal Services, Research Proposal Assistance, Academic Proposal Writing, Proposal Drafting Services, PhD Proposal Guidance, Research Proposal Editing, Proposal Formatting, Research Proposal Support, Custom Proposal Writing, Research Proposal Review, Dissertation Proposal Support, Professional Proposal Writing, Proposal Writing for Scholars, Research Proposal Preparation, Academic Research Proposals, PhD Proposal Services, Devmatrixlab Proposal Support" />
+
+  
+    <meta name="description" content="Devmatrixlab offers expert Research Proposal Writing services for PhD scholars. Get structured proposals with objectives, methodology & literature support." />
+
+  
+  <title>Research Preposal - DevMatrixLab</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Your SEO structured data -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DevMatrixLab",
+    "url": "https://devmatrixlab.com",
+    "logo": "https://devmatrixlab.com/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/devmatrixlab",
+      "https://www.linkedin.com/company/devmatrixlab"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9347967147",
+      "contactType": "customer service"
+    }
+  }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "DevMatrixLab",
+  "image": "https://devmatrixlab.com/logo.png",
+  "url": "https://devmatrixlab.com",
+  "telephone": "+91-9876543210",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Your Street Address, Kukatpally",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "500072",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
+  "sameAs": [
+    "https://www.facebook.com/devmatrixlab",
+    "https://www.linkedin.com/company/devmatrixlab",
+    "https://twitter.com/devmatrixlab"
+  ]
+}
+</script>
+
+
+  <style>
+    body {
+      margin: 0px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Top header */
+    .top-header {
+      background: #008080;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 50px;
+      font-size: 14px;
+      flex-wrap: wrap;
+    }
+
+    .top-header i {
+      margin-right: 8px;
+      color: white;
+    }
+
+    .contact-info {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      color: white;
+      margin-left: 12px;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: white;
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 1000;
+      
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      position: relative;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #008080;
+    }
+
+    .navbar ul li i {
+      color: #7ab800;
+      margin-left: 4px;
+    }
+
+    /* Dropdown */
+    .navbar ul li ul.dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: none;
+      min-width: 220px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+
+    .navbar ul li ul.dropdown li a {
+      display: block;
+      padding: 12px 15px;
+      color: black;
+      font-weight: 400;
+    }
+
+    .navbar ul li ul.dropdown li a:hover {
+      background: #f5f5f5;
+      color: #008080;
+    }
+
+    /* Hover effect for desktop */
+    .navbar ul li:hover > ul.dropdown {
+      display: block;
+    }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #008080;
+    }
+
+    /* Overlay */
+    #overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+      z-index: 1500;
+    }
+    #overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Mobile Menu */
+    @media (max-width: 768px) {
+      .hamburger { display: block; }
+
+      .navbar nav {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 240px;
+        height: 100%;
+        background: #fff;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+        transition: right 0.4s ease;
+        z-index: 2001;
+        padding: 20px;
+        
+      }
+
+      .navbar nav.active { right: 0; }
+
+      .navbar nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        margin-top: 40px;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .navbar nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+
+      .navbar nav ul li a:hover {
+        background: #f2f2f2;
+        color: #008080;
+      }
+
+      /* Mobile dropdown */
+      .navbar ul li ul.dropdown {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        padding-left: 10px;
+      }
+      .dropdown-parent.active ul.dropdown { display: block; }
+      .navbar ul li ul.dropdown li a {
+        padding-left: 30px;
+      }
+
+      /* Close button */
+      .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 26px;
+        color: #008080;
+        cursor: pointer;
+      }
+    }
+
+    /* Banner Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      background: url("imag/Research\ proposal\ writing.jpg") no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    .hero h1 { font-size: 48px; font-weight: bold; }
+    .hero h1 span { color: #7ab800; }
+    .hero p { margin-top: 10px; font-size: 18px; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: #7ab800;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover { background: #5a8d00; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 28px; }
+      .hero p { font-size: 14px; }
+      .btn { padding: 10px 20px; font-size: 14px; }
+    }
+
+    @media (max-width: 480px) {
+      .logo img { height: 40px; }
+      .hero { height: 70vh; }
+      .hero h1 { font-size: 22px; }
+      .hero p { font-size: 13px; }
+      .btn { font-size: 13px; padding: 8px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <div class="top-header">
+    <div class="contact-info">
+      <i class="fa-solid fa-envelope"></i> devmatrixlab@gmail.com
+      <i class="fa-solid fa-phone"></i> +91 7207494254
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-telegram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="imag/devmatrixlab.png" alt="DevMatrixLab Logo">
+    </div>
+    <button class="hamburger" onclick="toggleMenu()"><i class="fa fa-bars"></i></button>
+    
+
+    <div id="overlay" onclick="toggleMenu()"></div>
+
+    <nav id="nav-menu">
+      
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About us</a></li>
+
+        <!-- Services Dropdown -->
+        <li class="dropdown-parent">
+          <a href="#">Services <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="thesis.html">Thesis Writing & Editing</a></li>
+            <li><a href="Dissertation Writing Service.html">Dissertation Writing</a></li>
+            <li><a href="research paper writing.html">Research Paper Writing</a></li>
+            <li><a href="Proofreading Service.html">Proofreading Service</a></li>
+            <li><a href="implementation.html">Implementation</a></li>
+            <li><a href="Literature Review.html">Literature Review</a></li>
+            <li><a href="methodology.html">Research Methodology</a></li>
+            <li><a href="journal paper publication.html">Journal Paper Publication</a></li>
+            <li><a href="research-proposal.html">Research Proposal</a></li>
+          </ul>
+        </li>
+
+        <!-- Journal Publication Dropdown -->
+        <li class="dropdown-parent">
+          <a href="#">Journal Publication <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="sci indexed journal.html">SCI Journals</a></li>
+            <li><a href="scopus indexed journal.html">Scopus Journals</a></li>
+          </ul>
+        </li>
+
+        <!-- Research Topics -->
+         <li><a href="assignement.html">Assignment</a></li>
+         <li><a href="projects.html">Projects</a></li>
+         <li><a href="a-z development.html">A-Z Development</a></li>
+        <li><a href="research topics.html">Research Topics</a></li>
+        <li><a href="why devmatrixlab.html">Why DevMatrixLab</a></li>
+        <li><a href="contact n.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner Section -->
+  <section class="hero">
+    <div class="hero-content">
+      
+      <h1>Research Preposal</h1>
+      <p>PhD Consultancy in Hyderabad | Research, Journal Publication, and AI-driven Guidance</p>
+      
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-menu").classList.toggle("active");
+      document.getElementById("overlay").classList.toggle("active");
+    }
+
+    // Toggle dropdowns on mobile
+    document.querySelectorAll('.dropdown-parent > a').forEach(item => {
+      item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          let parent = this.parentElement;
+
+          document.querySelectorAll('.dropdown-parent').forEach(el => {
+            if (el !== parent) el.classList.remove('active');
+          });
+
+          parent.classList.toggle('active');
+        }
+      });
+    });
+  </script>
+<!-------------------------------------------------------------------------------------------------------------->
+<!-- Research Proposal Section -->
+<section class="research-proposal">
+  <div class="proposal-content">
+    <h2 class="fade-in">Research Proposal</h2>
+    <p class="fade-in">
+      A research proposal is more than just a formal document — it is often the key to securing 
+      sponsorship and institutional approval. Proposals are evaluated on the basis of 
+      <strong>cost, feasibility, prior research, and the potential impact</strong> they can create. 
+      A strong proposal addresses crucial aspects such as the objectives of the study, the 
+      estimated <strong>time and expenses</strong>, existing work in the field, and the benefits 
+      that the research can bring to the organization, academic community, and sponsors.
+    </p>
+
+    <p class="fade-in">
+      One of the most essential components of a research proposal is the formulation of 
+      <strong>research questions</strong>. These questions guide the entire direction of the study 
+      and help in defining what exactly the research aims to explore. Well-framed research 
+      questions allow reviewers to assess the feasibility of the project, anticipate possible 
+      conclusions, and provide meaningful feedback for refinement. They also give structure to 
+      the proposal, making it clear and convincing.
+    </p>
+
+    <p class="fade-in">
+      Ultimately, a strong research proposal not only demonstrates the <strong>importance and 
+      novelty</strong> of the study but also reassures sponsors and stakeholders of its 
+      <strong>value, impact, and execution plan</strong>. With clear goals, realistic timelines, 
+      and well-structured questions, it sets the foundation for a successful research journey.
+    </p>
+  </div>
+</section>
+
+<style>
+/* Full-screen Research Proposal */
+.research-proposal {
+  width: 100%;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #f0fdfa, #ecfdf5);
+  display: flex;
+  justify-content: center;
+}
+
+.proposal-content {
+  max-width: 1200px;
+}
+
+.proposal-content h2 {
+  font-size: 2.5rem;
+  color: #0f766e;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.proposal-content p {
+  font-size: 1.2rem;
+  line-height: 1.9;
+  color: #333;
+  margin-bottom: 25px;
+  text-align: justify;
+}
+
+/* Hover effect */
+.proposal-content p:hover {
+  transform: translateY(-4px);
+  opacity: 0.95;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================= */
+/* 📱 Responsive Design */
+/* ============================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .research-proposal {
+    padding: 60px 6%;
+  }
+  .proposal-content h2 {
+    font-size: 2rem;
+  }
+  .proposal-content p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .research-proposal {
+    padding: 50px 5%;
+  }
+  .proposal-content h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+  .proposal-content p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .research-proposal {
+    padding: 40px 4%;
+  }
+  .proposal-content h2 {
+    font-size: 1.5rem;
+  }
+  .proposal-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+</style>
+
+<script>
+/* Scroll Animation */
+document.addEventListener("DOMContentLoaded", function () {
+  const fadeElements = document.querySelectorAll(".fade-in");
+
+  function checkVisibility() {
+    fadeElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        el.classList.add("visible");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility(); // Run on load
+});
+</script>
+<!------------------------------------------------------------------------------------------------------------------>
+<!-- Research Paper & Proposal Section -->
+<section class="research-section">
+  <div class="research-container">
+    <!-- What is a Research Paper -->
+    <h2 class="fade-in">What is a Research Paper?</h2>
+    <p class="fade-in">
+      A research paper is a detailed academic document that explores, analyzes, and interprets 
+      a specific topic or question. It is based on original research, evidence, and analysis. 
+      A research proposal, on the other hand, is a plan written before conducting research, 
+      mostly for sponsorship and approval purposes. Proposals are evaluated on the 
+      <strong>cost, feasibility, and potential impact</strong> of the research.
+    </p>
+
+    <!-- How to write a Research Proposal -->
+    <h2 class="fade-in">How to Write a Research Proposal?</h2>
+    <div class="proposal-steps">
+      <div class="step fade-in">
+        <h3>1. Title Page</h3>
+        <p>Includes the research title, your name, institution, and contact details.</p>
+      </div>
+      <div class="step fade-in">
+        <h3>2. Summary</h3>
+        <p>A brief overview of your research aim, scope, and expected outcomes.</p>
+      </div>
+      <div class="step fade-in">
+        <h3>3. Introduction</h3>
+        <p>Explains the background, importance, and objectives of your research.</p>
+      </div>
+      <div class="step fade-in">
+        <h3>4. Literature Review</h3>
+        <p>Summarizes existing research and highlights gaps your study will address.</p>
+      </div>
+      <div class="step fade-in">
+        <h3>5. Methodology</h3>
+        <p>Outlines the research design, methods, data collection, and analysis plan.</p>
+      </div>
+      <div class="step fade-in">
+        <h3>6. Timeline</h3>
+        <p>Provides a clear schedule of tasks and milestones for your research.</p>
+      </div>
+      <div class="step fade-in">
+        <h3>7. Reference Section</h3>
+        <p>Lists all academic sources cited in your proposal.</p>
+      </div>
+      <div class="step fade-in">
+        <h3>8. Appendices</h3>
+        <p>Includes supplementary materials like questionnaires, charts, or raw data.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Section Styling */
+.research-section {
+  width: 100%;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #f9fafb, #eef2ff);
+}
+
+.research-container h2 {
+  font-size: 2.3rem;
+  color: #0f766e;
+  font-weight: 700;
+  margin: 40px 0 20px;
+  text-align: center;
+}
+
+.research-container p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+  margin-bottom: 40px;
+}
+
+/* Proposal Steps */
+.proposal-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.step {
+  background: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.step h3 {
+  font-size: 1.3rem;
+  color: #0f766e;
+  margin-bottom: 10px;
+}
+
+.step p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================= */
+/* 📱 Responsive Design */
+/* ============================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .research-container h2 {
+    font-size: 2rem;
+  }
+  .research-container p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .research-section {
+    padding: 50px 6%;
+  }
+  .research-container h2 {
+    font-size: 1.8rem;
+  }
+  .research-container p {
+    font-size: 1rem;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .research-section {
+    padding: 40px 5%;
+  }
+  .research-container h2 {
+    font-size: 1.5rem;
+  }
+  .step {
+    padding: 20px;
+  }
+}
+</style>
+
+<script>
+/* Scroll Animation */
+document.addEventListener("DOMContentLoaded", function () {
+  const fadeElements = document.querySelectorAll(".fade-in");
+
+  function checkVisibility() {
+    fadeElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        el.classList.add("visible");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility();
+});
+</script>
+<!--------------------------------------------------------------------------------------------------->
+<!-- Research Proposal Format Section -->
+<section class="proposal-format">
+  <div class="format-container">
+    
+    <!-- Left side: Image -->
+    <div class="format-image fade-in">
+      <img src="imag/res2.jpg" alt="Research Proposal Format">
+    </div>
+
+    <!-- Right side: Content -->
+    <div class="format-content fade-in">
+      <h2>Research Proposal Format</h2>
+      <p>
+        A research proposal should not be longer than <strong>200 words</strong>.  
+        It should clearly explain the proposed research work in a concise and professional manner.
+      </p>
+      <p>
+        The research proposal provides a broad summary of the current study, the challenges addressed, 
+        and the expected outcomes of the research. It also highlights how the research can contribute 
+        to knowledge and practice.
+      </p>
+      <ul>
+        <li>📑 Table of Content</li>
+        <li>📖 Introduction</li>
+        <li>📚 Literature Review</li>
+        <li>🧪 Method</li>
+        <li>💡 Discussion</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Section Styling */
+.proposal-format {
+  width: 100%;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #f0fdfa, #e0f2fe);
+}
+
+.format-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+/* Image */
+.format-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+.format-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Content */
+.format-content {
+  flex: 1;
+}
+.format-content h2 {
+  font-size: 2.3rem;
+  color: #0f766e;
+  margin-bottom: 20px;
+}
+.format-content p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+.format-content ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+.format-content ul li {
+  font-size: 1.05rem;
+  color: #0f766e;
+  margin-bottom: 8px;
+  list-style: none;
+}
+
+/* Emoji bullets */
+.format-content ul li::before {
+  content: "✔ ";
+  color: #059669;
+  font-weight: bold;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============================= */
+/* 📱 Responsive Design */
+/* ============================= */
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .proposal-format {
+    padding: 60px 8%;
+  }
+  .format-content h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .format-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .format-content h2 {
+    font-size: 1.8rem;
+  }
+  .format-content p {
+    font-size: 1rem;
+  }
+  .format-content ul {
+    padding-left: 0;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .proposal-format {
+    padding: 40px 6%;
+  }
+  .format-content h2 {
+    font-size: 1.5rem;
+  }
+}
+</style>
+
+<script>
+/* Scroll Animation */
+document.addEventListener("DOMContentLoaded", function () {
+  const fadeElements = document.querySelectorAll(".fade-in");
+
+  function checkVisibility() {
+    fadeElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 50) {
+        el.classList.add("visible");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility();
+});
+</script>
+<!--------------------------------------------------------------------------------------------------------------------->
+
+<!-- ========================= -->
+<!-- Section 1: Best Research Proposal -->
+<!-- ========================= -->
+<section class="best-proposal">
+  <div class="proposal-container">
+    
+    <!-- Left: Image -->
+    <div class="proposal-image fade-in">
+      <img src="imag/best.jpg" alt="Best Research Proposal">
+    </div>
+
+    <!-- Right: Content -->
+    <div class="proposal-text fade-in">
+      <h2>How a Best Research Proposal Be Like</h2>
+      <ul class="checklist">
+        <li>📌 Based on detailed analysis of the research area to design a novel concept</li>
+        <li>📚 Comprehensive review of literature to identify existing problems</li>
+        <li>🔍 Consider research gaps and questions carefully</li>
+        <li>📝 Take logical steps for timely achievement of goals</li>
+        <li>✨ Demonstrate significant components of the research</li>
+        <li>💻 Consider implementation platform before proceeding</li>
+        <li>📊 Ensure utilization of appropriate sources</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========================= -->
+<!-- Section 2: Research Proposal Questions -->
+<!-- ========================= -->
+<section class="proposal-questions">
+  <div class="questions-container">
+    
+    <!-- Left: Content -->
+    <div class="questions-text fade-in">
+      <h2>Research Proposal Basic Questions</h2>
+      
+      <div class="question-box">
+        <h3> How Do You Plan to Achieve Your Goals?</h3>
+        <p>
+          Layout a far-reaching research study with a complete review of the literature 
+          to confirm that an investigation issue has not been adequately addressed or 
+          has been addressed poorly. This helps in becoming better at finding important 
+          permits related to your subject.
+        </p>
+      </div>
+
+      <div class="question-box">
+        <h3> Why Should One Go Into Research?</h3>
+        <p>
+          Research allows you to pursue your interests, learn something new, 
+          improve problem-solving skills, and challenge yourself with modern technologies.
+        </p>
+      </div>
+
+      <div class="question-box">
+        <h3> How Will You Conduct Your Research?</h3>
+        <p>
+          Ensure that your proposed research is feasible. 
+          If you struggle to define a research problem, 
+          focus on refining your topic and identifying realistic research objectives.
+        </p>
+      </div>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="questions-image fade-in">
+      <img src="imag/rr.jpg" alt="Research Proposal Questions">
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ========================= -->
+<!-- CSS Styling -->
+<!-- ========================= -->
+<style>
+/* General Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Section 1 - Best Research Proposal */
+.best-proposal {
+  width: 100%;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #f0f9ff, #e0f7fa);
+}
+.proposal-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.proposal-image img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+.proposal-image img:hover {
+  transform: scale(1.05);
+}
+.proposal-text {
+  flex: 1;
+}
+.proposal-text h2 {
+  font-size: 2.3rem;
+  color: #0f766e;
+  margin-bottom: 20px;
+}
+.checklist {
+  list-style: none;
+}
+.checklist li {
+  background: #ecfdf5;
+  margin-bottom: 12px;
+  padding: 12px 15px;
+  border-left: 6px solid #059669;
+  border-radius: 10px;
+  font-size: 1.05rem;
+  color: #065f46;
+  transition: transform 0.3s;
+}
+.checklist li:hover {
+  transform: translateX(8px);
+  background: #d1fae5;
+}
+
+/* Section 2 - Research Proposal Questions */
+.proposal-questions {
+  width: 100%;
+  padding: 80px 10%;
+  background: linear-gradient(135deg, #fff7ed, #fffbeb);
+}
+.questions-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.questions-text {
+  flex: 1;
+}
+.questions-text h2 {
+  font-size: 2.3rem;
+  color: #0f766e;
+  margin-bottom: 25px;
+}
+.question-box {
+  background: #fff;
+  border-left: 6px solid #7ab800;
+  padding: 18px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+.question-box:hover {
+  transform: translateY(-6px);
+}
+.question-box h3 {
+  font-size: 1.3rem;
+  color: #0f766e;
+  margin-bottom: 10px;
+}
+.question-box p {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.6;
+  text-align: justify;
+}
+.questions-image img {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+  transition: transform 0.4s ease;
+}
+.questions-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Scroll Fade Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .proposal-text h2, .questions-text h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 768px) {
+  .proposal-container, .questions-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .proposal-text h2, .questions-text h2 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 480px) {
+  .best-proposal, .proposal-questions {
+    padding: 50px 6%;
+  }
+  .proposal-text h2, .questions-text h2 {
+    font-size: 1.5rem;
+  }
+}
+</style>
+
+<!-- ========================= -->
+<!-- JavaScript for Animation -->
+<!-- ========================= -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const fadeElements = document.querySelectorAll(".fade-in");
+
+  function checkVisibility() {
+    fadeElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight - 60) {
+        el.classList.add("visible");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", checkVisibility);
+  checkVisibility();
+});
+</script>
+<!------------------------------------------------------------------------------------------------------------------>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fdfdfd;
+      color: #333;
+    }
+
+    .promise-section {
+      width: 100%;
+      min-height: 100vh;
+      padding: 60px 20px;
+      background: #fdfdfd;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .promise-section h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #222;
+      font-weight: bold;
+      position: relative;
+    }
+
+    .promise-section h1::after {
+      content: "";
+      width: 80px;
+      height: 4px;
+      background: #7ab800;
+      display: block;
+      margin: 10px auto 0;
+      border-radius: 2px;
+    }
+
+    .promise-section p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #555;
+    }
+
+    .promise-boxes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
+      margin-top: 30px;
+      width: 100%;
+      max-width: 1100px;
+    }
+
+    .box {
+      background: #fff;
+      color: #333;
+      padding: 25px 20px;
+      border-radius: 18px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+      transition: all 0.4s ease;
+      border-top: 4px solid #7ab800;
+    }
+
+    .box:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .box h3 {
+      margin-bottom: 15px;
+      font-size: 1.4rem;
+      color: #7ab800;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .promise-section h1 {
+        font-size: 2rem;
+      }
+      .promise-section p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .promise-section {
+        padding: 40px 15px;
+      }
+      .promise-section h1 {
+        font-size: 1.8rem;
+      }
+      .promise-section p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="promise-section">
+    <h1>We Promise You Paper Acceptance</h1>
+    <p>
+      As the leading research proposal writing service in India, our team works with diligence and commitment. 
+      We ensure that your research papers are crafted with precision, clarity, and originality to minimize rejections.
+    </p>
+    <p>
+      Starting a research paper can be challenging. With our expert guidance, you’ll get support at every stage—from 
+      structuring ideas to final submission. We guarantee trust, confidentiality, and quality in every step of your PhD journey.
+    </p>
+
+    <div class="promise-boxes">
+      <div class="box">
+        <h3>Confidential Service</h3>
+        <p>Every detail of your research proposal, from copyrights to methodologies, is handled with complete 
+        privacy and security.</p>
+      </div>
+      <div class="box">
+        <h3>Step-by-Step Guidance</h3>
+        <p>Our experts assist you in defining objectives, structuring content, and refining your proposal for maximum impact.</p>
+      </div>
+      <div class="box">
+        <h3>Guaranteed Support</h3>
+        <p>We provide consistent guidance until your proposal is accepted, ensuring your success in the PhD journey.</p>
+      </div>
+    </div>
+  </section>
+<!------------------------------------------------------------------------------------------------------------------>
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Us</h1>
+        <p><i class="fas fa-paper-plane"></i> devmatrixlab@gmail.com</p>
+        <p><i class="fas fa-phone-square-alt"></i> 9347967147</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.threads.net/@devmatrixlab"><i class="fab fa-twitter-square"></i></a>
+          <a href="https://www.instagram.com/devmatrixlab?utm_source=qr&igsh=MWdtODdkbnZnYmN2cA== "><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="text" name="Number" placeholder="Your Number" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <a href="https://wa.me/919347967147" target="_blank" class="whatsapp-float">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+  </a>
+</div>
+<style>
+/* Contact Section */
+#contact {
+  background: linear-gradient(135deg, #f9f9f9, #e8f5e9);
+  padding: 80px 10%;
+  font-family: 'Poppins', sans-serif;
+}
+
+#contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-left, .contact-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-left h1.sub-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  position: relative;
+  animation: slideInLeft 1s ease;
+}
+
+.contact-left p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #444;
+  animation: fadeIn 1s ease forwards;
+}
+
+.contact-left p i {
+  color: #2e7d32;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  margin-right: 15px;
+  color: #555;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #2e7d32;
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Contact Form */
+.contact-right form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  animation: slideInRight 1s ease;
+}
+
+.contact-right input, 
+.contact-right textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-right input:focus, 
+.contact-right textarea:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 8px rgba(46,125,50,0.4);
+}
+
+.btn.btn2 {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #2e7d32;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn.btn2:hover {
+  background: #1b5e20;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(46,125,50,0.3);
+}
+
+#msg {
+  display: block;
+  margin-top: 10px;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.2) rotate(15deg);
+  box-shadow: 0 8px 20px rgba(0, 200, 83, 0.4);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<!-----------------------------footer----------------------------------->
+  <!-- Footer Start -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="footer-container">
+        <div class="footer-column about">
+          <img src="imag/devmatrixlab.png" alt="Logo" class="footer-logo">
+          <p>
+            DevMatrixLab is a unit of DevMatrix Educational Consultancy. Since its inception in 2015, the company has guided over 500 PhD candidates in their research journey. Originally established in Hyderabad,Chennai,bengaluru and Guntur DevMatrixLab continues to support doctoral scholars with expert consultation and tailored research assistance. Clients interested in discussing their doctoral research can schedule meetings any day between 9:00 AM and 9:00 PM at our office location.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.threads.net/@devmatrixlab"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/devmatrixlab?utm_source=qr&igsh=MWdtODdkbnZnYmN2cA== "><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column links">
+          <h4>LINKS</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="assignement.html">Assignment</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="research topics.html">Research Topics</a></li>
+                <li><a href="a-z development.html">A-Z development</a></li>
+                <li><a href="why devmatrixlab.html">Why Devmatrixlab</a></li>
+                <li><a href="contact n.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column support">
+          <h4>SUPPORT</h4>
+          <div class="support-info">
+            <i class="fas fa-envelope"></i> devmatrixlab@gmail.com
+          </div>
+          <div class="support-info">
+            <i class="fas fa-phone"></i> 9347967147
+          </div>
+          <div class="support-info">
+            <i class="fas fa-mobile-alt"></i> 7207494254
+          </div>
+        </div>
+
+        <div class="footer-column address">
+          <h4>ADDRESS</h4>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              OFFICE 1 <br>
+              Beside AAA Mall, upside of Bata ShowRoom, Ameerpet, Hyderabad, Telangana-500016
+            </li><br>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              OFFICE 2 <br>
+              beside marina mall, near toll plaz, navalur, chennai, Tamil Nadu
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              OFFICE 3 <br>
+              Beside of Guntur Bus Stop, Guntur, Andhra Pradesh
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© Copyright 2019. All Rights Reserved By <span>DevMatrixLab</span></p>
+      <div class="footer-links">
+        <a href="#">TERMS OF USER</a> |
+        <a href="#">LICENSE</a> |
+        <a href="#">SUPPORT</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+<style>
+    /* ---------- FOOTER ---------- */
+/* ---------- FOOTER ---------- */
+#footer {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #e5e5e5;
+  font-family: "Poppins", sans-serif;
+  margin-top: 60px;
+  border-top: 3px solid #00c896;
+}
+
+.footer-top {
+  padding: 60px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-column {
+  padding: 10px;
+}
+
+.footer-logo {
+  width: 140px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.footer-column h4::after {
+  content: "";
+  width: 45px;
+  height: 3px;
+  background: #00c896;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  border-radius: 2px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #cccccc;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.footer-column ul li a {
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #00c896;
+  padding-left: 6px;
+}
+
+.support-info {
+  margin: 12px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #bbbbbb;
+}
+
+.support-info i {
+  color: #00c896;
+}
+
+.social-links {
+  margin-top: 25px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 14px;
+  color: #bbbbbb;
+  font-size: 20px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #00c896;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 200, 150, 0.4);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid #2a2a2a;
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 13px;
+  background: #0d0d0d;
+}
+
+.footer-bottom span {
+  color: #00c896;
+  font-weight: 600;
+}
+
+.footer-bottom .footer-links {
+  margin-top: 8px;
+}
+
+.footer-bottom .footer-links a {
+  color: #bbbbbb;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-bottom .footer-links a:hover {
+  color: #00c896;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-column h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-links {
+    margin-top: 15px;
+  }
+}
+
+</style>
+
+
+</body>
+</html>

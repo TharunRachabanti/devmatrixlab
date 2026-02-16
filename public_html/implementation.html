@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Implementation Services - DevMatrixLab</title>
+  <meta name="description" content="Devmatrixlab offers professional Implementation Services for academic projects, research solutions, and enterprise applications. From concept to deployment, we ensure smooth execution and reliable outcomes." />
+
+  <meta name="keywords" content="Implementation Services, Project Implementation, Research Implementation, Academic Project Support, Software Implementation, PhD Project Implementation, Devmatrixlab Implementation Services" />
+  <meta name="author" content="DevMatrixLab">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Thesis Writing Service | DevMatrixLab">
+  <meta property="og:description" content="Get expert help with your PhD thesis writing, editing, and publication. Affordable and reliable academic services.">
+  <meta property="og:image" content="images/thesis-service.jpg">
+  <meta property="og:url" content="https://yourwebsite.com/thesis-writing.html">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Top header */
+    .top-header {
+      background: #008080;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 50px;
+      font-size: 14px;
+      flex-wrap: wrap;
+    }
+
+    .top-header i {
+      margin-right: 8px;
+      color: white;
+    }
+
+    .contact-info {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      color: white;
+      margin-left: 12px;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: white;
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 1000;
+      
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      position: relative;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #008080;
+    }
+
+    .navbar ul li i {
+      color: #7ab800;
+      margin-left: 4px;
+    }
+
+    /* Dropdown */
+    .navbar ul li ul.dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: none;
+      min-width: 220px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+
+    .navbar ul li ul.dropdown li a {
+      display: block;
+      padding: 12px 15px;
+      color: black;
+      font-weight: 400;
+    }
+
+    .navbar ul li ul.dropdown li a:hover {
+      background: #f5f5f5;
+      color: #008080;
+    }
+
+    /* Hover effect for desktop */
+    .navbar ul li:hover > ul.dropdown {
+      display: block;
+    }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #008080;
+    }
+
+    /* Overlay */
+    #overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+      z-index: 1500;
+    }
+    #overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Mobile Menu */
+    @media (max-width: 768px) {
+      .hamburger { display: block; }
+
+      .navbar nav {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 240px;
+        height: 100%;
+        background: #fff;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+        transition: right 0.4s ease;
+        z-index: 2001;
+        padding: 20px;
+        
+      }
+
+      .navbar nav.active { right: 0; }
+
+      .navbar nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        margin-top: 40px;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .navbar nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+
+      .navbar nav ul li a:hover {
+        background: #f2f2f2;
+        color: #008080;
+      }
+
+      /* Mobile dropdown */
+      .navbar ul li ul.dropdown {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        padding-left: 10px;
+      }
+      .dropdown-parent.active ul.dropdown { display: block; }
+      .navbar ul li ul.dropdown li a {
+        padding-left: 30px;
+      }
+
+      /* Close button */
+      .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 26px;
+        color: #008080;
+        cursor: pointer;
+      }
+    }
+
+    /* Banner Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      background: url("imag/implemantation.123.jpg") no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    .hero h1 { font-size: 48px; font-weight: bold; }
+    .hero h1 span { color: #7ab800; }
+    .hero p { margin-top: 10px; font-size: 18px; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: #7ab800;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover { background: #5a8d00; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 28px; }
+      .hero p { font-size: 14px; }
+      .btn { padding: 10px 20px; font-size: 14px; }
+    }
+
+    @media (max-width: 480px) {
+      .logo img { height: 40px; }
+      .hero { height: 70vh; }
+      .hero h1 { font-size: 22px; }
+      .hero p { font-size: 13px; }
+      .btn { font-size: 13px; padding: 8px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <div class="top-header">
+    <div class="contact-info">
+      <i class="fa-solid fa-envelope"></i> devmatrixlab@gmail.com
+      <i class="fa-solid fa-phone"></i> +91 7207494254
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-telegram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="imag/devmatrixlab.png" alt="DevMatrixLab Logo">
+    </div>
+    <button class="hamburger" onclick="toggleMenu()"><i class="fa fa-bars"></i></button>
+    
+
+    <div id="overlay" onclick="toggleMenu()"></div>
+
+    <nav id="nav-menu">
+      
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About us</a></li>
+
+        <!-- Services Dropdown -->
+        <li class="dropdown-parent">
+          <a href="#">Services <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="thesis.html">Thesis Writing & Editing</a></li>
+            <li><a href="Dissertation Writing Service.html">Dissertation Writing</a></li>
+            <li><a href="research paper writing.html">Research Paper Writing</a></li>
+            <li><a href="Proofreading Service.html">Proofreading Service</a></li>
+            <li><a href="implementation.html">Implementation</a></li>
+            <li><a href="Literature Review.html">Literature Review</a></li>
+            <li><a href="methodology.html">Research Methodology</a></li>
+            <li><a href="journal paper publication.html">Journal Paper Publication</a></li>
+            <li><a href="research preposal.html">Research Proposal</a></li>
+          </ul>
+        </li>
+
+        <!-- Journal Publication Dropdown -->
+        <li class="dropdown-parent">
+          <a href="#">Journal Publication <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="sci indexed journal.html">SCI Journals</a></li>
+            <li><a href="scopus indexed journal.html">Scopus Journals</a></li>
+          </ul>
+        </li>
+
+        <!-- Research Topics -->
+         <li><a href="assignement.html">Assignment</a></li>
+         <li><a href="projects.html">Projects</a></li>
+         <li><a href="a-z development.html">A-Z Development</a></li>
+        <li><a href="research topics.html">Research Topics</a></li>
+        <li><a href="why devmatrixlab.html">Why DevMatrixLab</a></li>
+        <li><a href="contact n.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner Section -->
+  <section class="hero">
+    <div class="hero-content">
+      
+      <h1>Welcome to <span>DevMatrixLab</span></h1>
+      <p>Implementation Service in Hyderabad</p>
+      
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-menu").classList.toggle("active");
+      document.getElementById("overlay").classList.toggle("active");
+    }
+
+    // Toggle dropdowns on mobile
+    document.querySelectorAll('.dropdown-parent > a').forEach(item => {
+      item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          let parent = this.parentElement;
+
+          document.querySelectorAll('.dropdown-parent').forEach(el => {
+            if (el !== parent) el.classList.remove('active');
+          });
+
+          parent.classList.toggle('active');
+        }
+      });
+    });
+  </script>
+
+  <!-- Implementation Section -->
+  <section class="implementation-section">
+    <div class="container">
+      <h2 class="section-title">Why Choose <span>Implementation Services?</span></h2>
+
+      <div class="implementation-content">
+        <div class="impl-item">
+          <h3>Seamless Project Execution</h3>
+          <p>We convert your academic and research ideas into real, functional solutions with precise implementation strategies.</p>
+        </div>
+
+        <div class="impl-item">
+          <h3>Customized Solutions</h3>
+          <p>Each project is tailored to your requirements, ensuring functionality, efficiency, and alignment with your goals.</p>
+        </div>
+
+        <div class="impl-item">
+          <h3>Technical Expertise</h3>
+          <p>Our team leverages cutting-edge technology and industry best practices to deliver high-quality implementation results.</p>
+        </div>
+
+        <div class="impl-item">
+          <h3>Support for Complex Projects</h3>
+          <p>We handle sophisticated tasks across software development, research tools, and AI-based solutions for scholars and businesses.</p>
+        </div>
+
+        <div class="impl-item">
+          <h3>Quality Assurance</h3>
+          <p>Every implementation is thoroughly tested for accuracy, performance, and scalability to ensure optimal results.</p>
+        </div>
+
+        <div class="impl-item">
+          <h3>End-to-End Service</h3>
+          <p>From planning to execution, we manage the entire lifecycle of your project, giving you peace of mind and reliable results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <style>
+    .implementation-section { background: #f9fdfc; padding: 60px 20px; width: 90%; }
+    .implementation-section .container { max-width: 1200px; margin: auto; }
+    .section-title { text-align: center; font-size: 2rem; font-weight: bold; color: #333; margin-bottom: 40px; animation: fadeDown 1s ease-in-out; }
+    .section-title span { color: #009688; }
+    .implementation-content { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+    .impl-item { background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 6px 16px rgba(0,0,0,0.08); transition: transform 0.3s ease, box-shadow 0.3s ease; animation: fadeUp 1s ease-in-out; }
+    .impl-item:hover { transform: translateY(-6px); box-shadow: 0 10px 20px rgba(0,0,0,0.15); }
+    .impl-item h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 10px; color: #00796b; }
+    .impl-item p { color: #444; line-height: 1.6; font-size: 0.95rem; }
+    @keyframes fadeDown { from { opacity: 0; transform: translateY(-30px); } to { opacity: 1; transform: translateY(0); } }
+    @keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 992px) { .implementation-content { grid-template-columns: 1fr; } .section-title { font-size: 1.7rem; } }
+    @media (max-width: 576px) { .impl-item { padding: 18px; } .impl-item h3 { font-size: 1.1rem; } .impl-item p { font-size: 0.9rem; } }
+  </style>
+
+  <!-- Implementation Choice Section -->
+  <section class="implementation-choice">
+    <h2 class="section-title">Why <span>DevMatrixLab</span> is the Right Partner for Your Implementation Needs</h2>
+    
+    <div class="implementation-grid">
+      <div class="impl-box fade-in">
+        <h3>Expert-Driven Solutions</h3>
+        <p>Projects are executed by experts ensuring clarity, precision, and functional excellence.</p>
+      </div>
+
+      <div class="impl-box fade-in">
+        <h3>Customized for Scholars & Businesses</h3>
+        <p>Solutions are tailored to research, software, and AI projects, keeping your goals and workflow in focus.</p>
+      </div>
+
+      <div class="impl-box fade-in">
+        <h3>On-Time Delivery</h3>
+        <p>We respect deadlines and ensure every project is delivered on schedule with quality assurance.</p>
+      </div>
+
+      <div class="impl-box fade-in">
+        <h3>Clear & Supportive Communication</h3>
+        <p>Our team provides regular updates, guidance, and technical support throughout the project lifecycle.</p>
+      </div>
+
+      <div class="impl-box fade-in">
+        <h3>Trusted by Professionals Worldwide</h3>
+        <p>DevMatrixLab is relied upon by researchers and businesses globally for effective implementation services.</p>
+      </div>
+    </div>
+
+    <blockquote class="closing-quote">
+      <p>“Turn Your Ideas into Reality with DevMatrixLab’s Expert Implementation Services.”</p>
+    </blockquote>
+  </section>
+
+  <style>
+    .implementation-choice { width: 90%; padding: 60px 20px; background: #f9f9f9; text-align: center; }
+    .implementation-choice .section-title { font-size: 2.2rem; font-weight: bold; margin-bottom: 40px; color: #333; }
+    .implementation-choice .section-title span { color: #4CAF50; }
+    .implementation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
+    .impl-box { background: #fff; padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); text-align: left; transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease; cursor: pointer; }
+    .impl-box h3 { font-size: 1.2rem; margin-bottom: 10px; color: #222; }
+    .impl-box p { font-size: 0.95rem; color: #555; line-height: 1.6; }
+    .impl-box:hover { transform: translateY(-8px); box-shadow: 0 8px 20px rgba(0,0,0,0.15); }
+    .impl-box.active { background: #d8f5d0; transform: scale(1.05); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+    .closing-quote { margin-top: 50px; font-size: 1.2rem; font-style: italic; color: #4CAF50; border-left: 4px solid #4CAF50; padding-left: 15px; max-width: 800px; margin-left: auto; margin-right: auto; }
+    .fade-in { opacity: 0; transform: translateY(30px); animation: fadeInUp 1s forwards; }
+    .fade-in:nth-child(1) { animation-delay: 0.2s; }
+    .fade-in:nth-child(2) { animation-delay: 0.4s; }
+    .fade-in:nth-child(3) { animation-delay: 0.6s; }
+    .fade-in:nth-child(4) { animation-delay: 0.8s; }
+    .fade-in:nth-child(5) { animation-delay: 1s; }
+    @keyframes fadeInUp { to { opacity: 1; transform: translateY(0); } }
+    @media (max-width: 768px) { .section-title { font-size: 1.8rem; } .impl-box { text-align: center; } }
+  </style>
+
+  <script>
+    document.querySelectorAll('.impl-box').forEach(box => {
+      box.addEventListener('click', () => {
+        document.querySelectorAll('.impl-box').forEach(b => b.classList.remove('active'));
+        box.classList.add('active');
+      });
+    });
+  </script>
+
+<!------------------------------------------------------------------------------------------------------------------------->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Us</h1>
+        <p><i class="fas fa-paper-plane"></i> devmatrixlab@gmail.com</p>
+        <p><i class="fas fa-phone-square-alt"></i> 9347967147</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.threads.net/@devmatrixlab"><i class="fab fa-twitter-square"></i></a>
+          <a href="https://www.instagram.com/devmatrixlab?utm_source=qr&igsh=MWdtODdkbnZnYmN2cA== "><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="text" name="Number" placeholder="Your Number" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <a href="https://wa.me/919347967147" target="_blank" class="whatsapp-float">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+  </a>
+</div>
+<style>
+/* Contact Section */
+#contact {
+  background: linear-gradient(135deg, #f9f9f9, #e8f5e9);
+  padding: 80px 10%;
+  font-family: 'Poppins', sans-serif;
+}
+
+#contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-left, .contact-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-left h1.sub-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  position: relative;
+  animation: slideInLeft 1s ease;
+}
+
+.contact-left p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #444;
+  animation: fadeIn 1s ease forwards;
+}
+
+.contact-left p i {
+  color: #2e7d32;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  margin-right: 15px;
+  color: #555;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #2e7d32;
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Contact Form */
+.contact-right form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  animation: slideInRight 1s ease;
+}
+
+.contact-right input, 
+.contact-right textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-right input:focus, 
+.contact-right textarea:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 8px rgba(46,125,50,0.4);
+}
+
+.btn.btn2 {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #2e7d32;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn.btn2:hover {
+  background: #1b5e20;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(46,125,50,0.3);
+}
+
+#msg {
+  display: block;
+  margin-top: 10px;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.2) rotate(15deg);
+  box-shadow: 0 8px 20px rgba(0, 200, 83, 0.4);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<!-----------------------------footer----------------------------------->
+  <!-- Footer Start -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="footer-container">
+        <div class="footer-column about">
+          <img src="imag/devmatrixlab.png" alt="Logo" class="footer-logo">
+          <p>
+            DevMatrixLab is a unit of DevMatrix Educational Consultancy. Since its inception in 2015, the company has guided over 500 PhD candidates in their research journey. Originally established in Hyderabad,Chennai,bengaluru and Guntur DevMatrixLab continues to support doctoral scholars with expert consultation and tailored research assistance. Clients interested in discussing their doctoral research can schedule meetings any day between 9:00 AM and 9:00 PM at our office location.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.threads.net/@devmatrixlab"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/devmatrixlab?utm_source=qr&igsh=MWdtODdkbnZnYmN2cA== "><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column links">
+          <h4>LINKS</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="assignement.html">Assignment</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="research topics.html">Research Topics</a></li>
+                <li><a href="a-z development.html">A-Z development</a></li>
+                <li><a href="why devmatrixlab.html">Why Devmatrixlab</a></li>
+                <li><a href="contact n.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column support">
+          <h4>SUPPORT</h4>
+          <div class="support-info">
+            <i class="fas fa-envelope"></i> devmatrixlab@gmail.com
+          </div>
+          <div class="support-info">
+            <i class="fas fa-phone"></i> 9347967147
+          </div>
+          <div class="support-info">
+            <i class="fas fa-mobile-alt"></i> 7207494254
+          </div>
+        </div>
+
+        <div class="footer-column address">
+          <h4>ADDRESS</h4>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              OFFICE 1 <br>
+              Beside AAA Mall, upside of Bata ShowRoom, Ameerpet, Hyderabad, Telangana-500016
+            </li><br>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              OFFICE 2 <br>
+              beside marina mall, near toll plaz, navalur, chennai, Tamil Nadu
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              OFFICE 3 <br>
+              Beside of Guntur Bus Stop, Guntur, Andhra Pradesh
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© Copyright 2019. All Rights Reserved By <span>DevMatrixLab</span></p>
+      <div class="footer-links">
+        <a href="#">TERMS OF USER</a> |
+        <a href="#">LICENSE</a> |
+        <a href="#">SUPPORT</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+<style>
+    /* ---------- FOOTER ---------- */
+/* ---------- FOOTER ---------- */
+#footer {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #e5e5e5;
+  font-family: "Poppins", sans-serif;
+  margin-top: 60px;
+  border-top: 3px solid #00c896;
+}
+
+.footer-top {
+  padding: 60px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-column {
+  padding: 10px;
+}
+
+.footer-logo {
+  width: 140px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.footer-column h4::after {
+  content: "";
+  width: 45px;
+  height: 3px;
+  background: #00c896;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  border-radius: 2px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #cccccc;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.footer-column ul li a {
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #00c896;
+  padding-left: 6px;
+}
+
+.support-info {
+  margin: 12px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #bbbbbb;
+}
+
+.support-info i {
+  color: #00c896;
+}
+
+.social-links {
+  margin-top: 25px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 14px;
+  color: #bbbbbb;
+  font-size: 20px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #00c896;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 200, 150, 0.4);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid #2a2a2a;
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 13px;
+  background: #0d0d0d;
+}
+
+.footer-bottom span {
+  color: #00c896;
+  font-weight: 600;
+}
+
+.footer-bottom .footer-links {
+  margin-top: 8px;
+}
+
+.footer-bottom .footer-links a {
+  color: #bbbbbb;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-bottom .footer-links a:hover {
+  color: #00c896;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-column h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-links {
+    margin-top: 15px;
+  }
+}
+
+</style>
+
+
+</body>
+</html>

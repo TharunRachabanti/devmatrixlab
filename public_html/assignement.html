@@ -1,0 +1,1261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,follow">
+    <meta name="keywords" content=" Educational Consultant, Best assignment writing services in Hyderabad,Assignment help for students in India
+    Professional academic writing services Hyderabad,Online assignment writers in Hyderabad,Affordable assignment writing in India
+    University assignment writing services,Top academic support for students Hyderabad,Custom assignment help in Hyderabad,Best academic writers in India,Plagiarism-free assignment writing services
+    Expert assignment writing support Hyderabad,Reliable academic writing company in Hyderabad,Research paper and assignment help India,Professional essay and assignment writers Hyderabad
+    Trusted assignment consultancy in Hyderabad,Academic writing assistance for students India,Best online assignment support Hyderabad,Assignment proofreading and editing services
+    Student academic writing experts in Hyderabad,Best PhD and assignment writing services India ">
+  
+    <meta name="description" content="Devmatrixlab offers expert Assignment Writing services for students and researchers. Get plagiarism-free, well-structured, and university-approved assignments with personalized academic support." />
+
+  
+  <title>Assignment Writing Service - DevMatrixLab</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Your SEO structured data -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Education Organization",
+    "name": "DevMatrixLab",
+    "url": "https://devmatrixlab.com/",
+    "logo": "https://devmatrixlab.com/imag/devmatrixlab.png",
+    "sameAs": [
+      "https://www.facebook.com/devmatrixlab",
+      "https://www.linkedin.com/company/devmatrixlab"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9347967147",
+      "contactType": "Education service"
+    }
+  }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Educational Consultancy",
+  "name": "DevMatrixLab",
+  "logo": "https://devmatrixlab.com/imag/devmatrixlab.png",
+  "url": "https://devmatrixlab.com/",
+  "telephone": "+91-9347967147",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Your Street Address, Kukatpally",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "500072",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
+  "sameAs": [
+    "https://www.facebook.com/devmatrixlab",
+    "https://www.linkedin.com/company/devmatrixlab",
+    "https://twitter.com/devmatrixlab"
+  ]
+}
+</script>
+
+
+  <style>
+    body {
+      margin: 0px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Top header */
+    .top-header {
+      background: #008080;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 50px;
+      font-size: 14px;
+      flex-wrap: wrap;
+    }
+
+    .top-header i {
+      margin-right: 8px;
+      color: white;
+    }
+
+    .contact-info {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      color: white;
+      margin-left: 12px;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: white;
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 1000;
+      
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      position: relative;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #008080;
+    }
+
+    .navbar ul li i {
+      color: #7ab800;
+      margin-left: 4px;
+    }
+
+    /* Dropdown */
+    .navbar ul li ul.dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: none;
+      min-width: 220px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+
+    .navbar ul li ul.dropdown li a {
+      display: block;
+      padding: 12px 15px;
+      color: black;
+      font-weight: 400;
+    }
+
+    .navbar ul li ul.dropdown li a:hover {
+      background: #f5f5f5;
+      color: #008080;
+    }
+
+    /* Hover effect for desktop */
+    .navbar ul li:hover > ul.dropdown {
+      display: block;
+    }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #008080;
+    }
+
+    /* Overlay */
+    #overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+      z-index: 1500;
+    }
+    #overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Mobile Menu */
+    @media (max-width: 768px) {
+      .hamburger { display: block; }
+
+      .navbar nav {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 240px;
+        height: 100%;
+        background: #fff;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+        transition: right 0.4s ease;
+        z-index: 2001;
+        padding: 20px;
+        
+      }
+
+      .navbar nav.active { right: 0; }
+
+      .navbar nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        margin-top: 40px;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .navbar nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+
+      .navbar nav ul li a:hover {
+        background: #f2f2f2;
+        color: #008080;
+      }
+
+      /* Mobile dropdown */
+      .navbar ul li ul.dropdown {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        padding-left: 10px;
+      }
+      .dropdown-parent.active ul.dropdown { display: block; }
+      .navbar ul li ul.dropdown li a {
+        padding-left: 30px;
+      }
+
+      /* Close button */
+      .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 26px;
+        color: #008080;
+        cursor: pointer;
+      }
+    }
+
+    /* Banner Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      background: url("imag/assignments.jpg") no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    .hero h1 { font-size: 48px; font-weight: bold; }
+    .hero h1 span { color: #7ab800; }
+    .hero p { margin-top: 10px; font-size: 18px; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: #7ab800;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover { background: #5a8d00; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 28px; }
+      .hero p { font-size: 14px; }
+      .btn { padding: 10px 20px; font-size: 14px; }
+    }
+
+    @media (max-width: 480px) {
+      .logo img { height: 40px; }
+      .hero { height: 70vh; }
+      .hero h1 { font-size: 22px; }
+      .hero p { font-size: 13px; }
+      .btn { font-size: 13px; padding: 8px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <div class="top-header">
+    <div class="contact-info">
+      <i class="fa-solid fa-envelope"></i> devmatrixlab@gmail.com
+      <i class="fa-solid fa-phone"></i> +91 7207494254
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-telegram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="imag/devmatrixlab.png" alt="DevMatrixLab Logo">
+    </div>
+    <button class="hamburger" onclick="toggleMenu()"><i class="fa fa-bars"></i></button>
+    
+
+    <div id="overlay" onclick="toggleMenu()"></div>
+
+    <nav id="nav-menu">
+      
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About us</a></li>
+
+        <!-- Services Dropdown -->
+        <li class="dropdown-parent">
+          <a href="#">Services <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="thesis.html">Thesis Writing & Editing</a></li>
+            <li><a href="Dissertation Writing Service.html">Dissertation Writing</a></li>
+            <li><a href="research paper writing.html">Research Paper Writing</a></li>
+            <li><a href="Proofreading Service.html">Proofreading Service</a></li>
+            <li><a href="implementation.html">Implementation</a></li>
+            <li><a href="Literature Review.html">Literature Review</a></li>
+            <li><a href="methodology.html">Research Methodology</a></li>
+            <li><a href="journal paper publication.html">Journal Paper Publication</a></li>
+            <li><a href="research preposal.html">Research Proposal</a></li>
+          </ul>
+        </li>
+
+        <!-- Journal Publication Dropdown -->
+        <li class="dropdown-parent">
+          <a href="#">Journal Publication <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="sci indexed journal.html">SCI Journals</a></li>
+            <li><a href="scopus indexed journal.html">Scopus Journals</a></li>
+          </ul>
+        </li>
+
+        <!-- Research Topics -->
+         <li><a href="assignement.html">Assignment</a></li>
+         <li><a href="projects.html">Projects</a></li>
+         <li><a href="a-z development.html">A-Z Development</a></li>
+        <li><a href="research topics.html">Research Topics</a></li>
+        <li><a href="why devmatrixlab.html">Why DevMatrixLab</a></li>
+        <li><a href="contact n.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner Section -->
+  <section class="hero">
+    <div class="hero-content">
+      
+      <h1>Welcome to <span>DevMatrixLab</span></h1>
+      <p>Assignment Writing  Consultancy in Hyderabad | Research and AI-driven Guidance</p>
+      
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-menu").classList.toggle("active");
+      document.getElementById("overlay").classList.toggle("active");
+    }
+
+    // Toggle dropdowns on mobile
+    document.querySelectorAll('.dropdown-parent > a').forEach(item => {
+      item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          let parent = this.parentElement;
+
+          document.querySelectorAll('.dropdown-parent').forEach(el => {
+            if (el !== parent) el.classList.remove('active');
+          });
+
+          parent.classList.toggle('active');
+        }
+      });
+    });
+  </script>
+<!-------------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Assignment Writing Service - DevMatrixLab</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #222;
+    }
+
+    .assignment-section {
+      background: linear-gradient(135deg, #ffb84d, #ff9933);
+      color: #222;
+      padding: 60px 20px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .assignment-content {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .assignment-section h2 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #000;
+    }
+
+    .assignment-section h1 {
+      font-size: 34px;
+      font-weight: 900;
+      margin-bottom: 20px;
+      color: #222;
+    }
+
+    .assignment-section p {
+      font-size: 16px;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #001f3f;
+      color: #fff;
+      padding: 14px 28px;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #003366;
+      transform: scale(1.05);
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .assignment-section {
+        padding: 40px 15px;
+      }
+
+      .assignment-section h1 {
+        font-size: 26px;
+      }
+
+      .assignment-section h2 {
+        font-size: 22px;
+      }
+
+      .assignment-section p {
+        font-size: 14px;
+      }
+
+      .btn {
+        width: 100%;
+        padding: 16px;
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="assignment-section">
+    <div class="assignment-content">
+      <h2>Assignment Writing Service That Makes Success Simple</h2>
+      <h1>End-to-End Academic Assignment Help by DevMatrixLab</h1>
+      <p>
+        At <strong>DevMatrixLab</strong>, we provide top-quality <strong>Assignment Writing Services</strong> designed 
+        to reduce stress and boost academic performance. With our expert team of writers, 
+        students receive personalized, plagiarism-free, and research-driven assignments 
+        across all domains of study.
+      </p>
+      <p>
+        Whether it’s <strong>essays, case studies, reports, technical papers, or project-based assignments</strong>, 
+        we ensure high-quality work delivered on time. Trusted by hundreds of students 
+        across India and abroad, we focus on <strong>clarity, originality, and academic accuracy</strong>.
+      </p>
+      <p>
+        Our process includes: 
+        <br>✔ Structured Research & Analysis 
+        <br>✔ 100% Original & Plagiarism-Free Work 
+        <br>✔ Timely Delivery & Deadline Commitment 
+        <br>✔ Free Revisions for Complete Satisfaction 
+        <br>✔ Affordable & Student-Friendly Pricing
+      </p>
+      <p>
+        With over <strong>good expertise</strong> in academic support, 
+        DevMatrixLab ensures that every student achieves success with confidence.
+      </p>
+      <a href="#contact" class="btn">📘 GET ASSIGNMENT HELP NOW</a>
+    </div>
+  </section>
+<!---------------------------------------------------------------------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services - DevMatrixLab</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f7f7f7;
+      color: #222;
+    }
+
+    .services-section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .services-section h1 {
+      font-size: 32px;
+      font-weight: 900;
+      margin-bottom: 40px;
+      color: #001f3f;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .service-box {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: all 0.4s ease;
+      cursor: pointer;
+    }
+
+    .service-box:hover {
+      transform: translateY(-8px) scale(1.03);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+
+    .service-box img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .service-content {
+      padding: 20px;
+    }
+
+    .service-content h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: #2ae430;
+    }
+
+    .service-content p {
+      font-size: 15px;
+      text-align: justify;
+      color: #444;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+      .services-section h1 {
+        font-size: 26px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="services-section">
+    <h1>Our Expert Services</h1>
+    <div class="services-grid">
+      
+      <!-- 1 -->
+      <div class="service-box">
+        <img src="imag/assign1.jpg" alt="Assignment Help">
+        <div class="service-content">
+          <h3>Record Writing & Assignment Help</h3>
+          <p>Our Record Writing & Assignment Help services offer precise, plagiarism-free, and timely academic support tailored to your specific requirements. We cover a wide range of subjects and academic levels, ensuring that every assignment meets the highest standards of quality. Our team of experienced writers and researchers works diligently to provide well-structured, insightful, and original content that enhances learning outcomes. Trusted by students and professionals worldwide, we aim to make your academic journey smoother, helping you achieve excellence in every submission. Beyond just writing, we also offer guidance on formatting, citations, and comprehensive review to ensure your assignments stand out.</p>
+
+        </div>
+      </div>
+      
+      <!-- 2 -->
+      <div class="service-box">
+        <img src="imag/assign2.jpg" alt="Creative Arts Help">
+        <div class="service-content">
+          <h3>Creative Arts & Crafts Help</h3>
+          <p>Bring your imagination to life with our expert guidance in academic arts, crafts, and creative project execution. We provide personalized support for projects, assignments, and presentations, helping you develop original ideas and transform them into visually appealing, high-quality work. Our team of skilled artists and educators ensures that your creative expressions meet academic standards while highlighting your unique style. From conceptualization to final execution, we guide you at every step, making your creative journey both enjoyable and successful.</p>
+        </div>
+      </div>
+      
+      <!-- 3 -->
+      <div class="service-box">
+        <img src="imag/assign3.jpg" alt="Dissertation Help">
+        <div class="service-content">
+<h3>Dissertation & Thesis Writing Help</h3>
+<p>Our Dissertation & Thesis Writing Help provides end-to-end research support, guiding you through topic selection, literature review, methodology, data analysis, and structured writing. We ensure your work adheres to the highest academic standards, maintaining originality, coherence, and proper formatting. Our team of experienced researchers and academic writers assists you in presenting complex ideas clearly and effectively, increasing the chances of approval and recognition. From drafting to final proofreading, we are committed to making your dissertation or thesis a successful and stress-free experience.</p>
+
+        </div>
+      </div>
+      
+      <!-- 4 -->
+      <div class="service-box">
+        <img src="imag/assign4.jpg" alt="PDF Editing Services">
+        <div class="service-content">
+          <h3>PDF Editing & Documentation</h3>
+<p>Our PDF Editing & Documentation services provide professional support for editing, formatting, and converting documents to meet academic and official standards. Whether you need polished reports, research papers, presentations, or official forms, we ensure your documents are accurate, well-structured, and visually appealing. We handle tasks such as text corrections, layout adjustments, page formatting, and conversion between file formats while maintaining the integrity of your content. Trusted by students, researchers, and professionals, we make sure your submissions are flawless, organized, and ready for review.</p>
+
+        </div>
+      </div>
+      
+      <!-- 5 -->
+      <div class="service-box">
+        <img src="imag/assign5.jpg" alt="Academic Drawing">
+        <div class="service-content">
+          <h3>Academic Drawing & Illustration Help</h3>
+<p>Our Academic Drawing & Illustration Help provides precise, high-quality illustrations, diagrams, and technical drawings tailored for assignments, projects, and research work. We assist students and researchers in visualizing complex concepts clearly, ensuring that every diagram or figure is accurate, professional, and publication-ready. From scientific charts and engineering schematics to creative academic visuals, our experts focus on clarity, correctness, and presentation quality, helping you enhance the impact and understanding of your academic submissions.</p>
+
+        </div>
+      </div>
+      
+      <!-- 6 -->
+      <div class="service-box">
+        <img src="imag/assign6.jpg" alt="Overseas Assignment Help">
+        <div class="service-content">
+          <h3>Overseas Assignment Help</h3>
+<p>Our Overseas Assignment Help offers specialized support for international students, ensuring your academic work meets global standards. We provide personalized guidance across a wide range of subjects, helping you with research, writing, formatting, and editing tailored to the requirements of universities worldwide. Our experienced team understands diverse academic systems and expectations, delivering original, high-quality assignments that enhance learning outcomes. With timely delivery and professional assistance, we make sure you succeed in your studies while reducing stress and improving academic performance.</p>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+<!--------------------------------------------------------------------------------------------------------->
+<section class="about-section">
+  <div class="about-container">
+    <h2>About Us</h2>
+    <p class="intro">
+      <strong>DevMatrixLab</strong> is a professional academic consultancy based in Hyderabad, 
+      dedicated to helping students and researchers achieve success with high-quality academic 
+      writing and project support. We specialize in assignments, dissertations, publications, 
+      and creative academic services tailored to global standards.
+    </p>
+
+    <div class="mission">
+      <h3>🎯 Our Mission</h3>
+      <p>
+        To empower students and researchers by providing reliable, plagiarism-free, 
+        and timely academic assistance that fosters excellence and innovation.  
+        Our goal is to simplify complex academic challenges and turn them into milestones of success.
+      </p>
+    </div>
+
+    <div class="why-choose">
+      <h3>✨ Why Choose Us?</h3>
+      <ul>
+        <li>✔ Experienced Academic Experts</li>
+        <li>✔ 100% Original & Plagiarism-Free Work</li>
+        <li>✔ Affordable & Student-Friendly Pricing</li>
+        <li>✔ End-to-End Guidance from Proposal to Publication</li>
+        <li>✔ Trusted by 1000+ Students Worldwide</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    background: #fff;
+    padding: 60px 20px;
+  }
+  .about-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .about-section h2 {
+    font-size: 32px;
+    font-weight: 900;
+    margin-bottom: 20px;
+    color: #ff6600;
+  }
+  .about-section .intro {
+    font-size: 16px;
+    margin-bottom: 30px;
+    text-align: justify;
+    color: #333;
+  }
+  .mission, .why-choose {
+    margin-bottom: 30px;
+    text-align: left;
+  }
+  .mission h3, .why-choose h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #001f3f;
+  }
+  .mission p {
+    font-size: 15px;
+    text-align: justify;
+    color: #444;
+  }
+  .why-choose ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  .why-choose li {
+    font-size: 15px;
+    margin: 8px 0;
+    background: #f7f7f7;
+    padding: 10px;
+    border-radius: 6px;
+    transition: 0.3s;
+  }
+  .why-choose li:hover {
+    background: #ffe0b3;
+    transform: translateX(5px);
+  }
+
+  /* Mobile */
+  @media (max-width: 768px) {
+    .about-section h2 { font-size: 26px; }
+    .mission h3, .why-choose h3 { font-size: 20px; }
+    .about-section .intro, .mission p, .why-choose li { font-size: 14px; }
+  }
+</style>
+<!----------------------------------------------------------------------------------------------------------------------->
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Us</h1>
+        <p><i class="fas fa-paper-plane"></i> devmatrixlab@gmail.com</p>
+        <p><i class="fas fa-phone-square-alt"></i> 9347967147</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.threads.net/@devmatrixlab"><i class="fab fa-twitter-square"></i></a>
+          <a href="https://www.instagram.com/devmatrixlab?utm_source=qr&igsh=MWdtODdkbnZnYmN2cA== "><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form action="https://docs.google.com/spreadsheets/d/1A64whNpXwOc3xree85DGbqZvK6QN2JRZez7YbL3A0Lg/edit?usp=sharing" method="post"></form>
+        <form name="submit-to-google-sheet">
+
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="text" name="Number" placeholder="Your Number" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <a href="https://wa.me/919347967147" target="_blank" class="whatsapp-float">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+  </a>
+</div>
+<style>
+/* Contact Section */
+#contact {
+  background: linear-gradient(135deg, #f9f9f9, #e8f5e9);
+  padding: 80px 10%;
+  font-family: 'Poppins', sans-serif;
+}
+
+#contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-left, .contact-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-left h1.sub-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  position: relative;
+  animation: slideInLeft 1s ease;
+}
+
+.contact-left p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #444;
+  animation: fadeIn 1s ease forwards;
+}
+
+.contact-left p i {
+  color: #2e7d32;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  margin-right: 15px;
+  color: #555;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #2e7d32;
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Contact Form */
+.contact-right form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  animation: slideInRight 1s ease;
+}
+
+.contact-right input, 
+.contact-right textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-right input:focus, 
+.contact-right textarea:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 8px rgba(46,125,50,0.4);
+}
+
+.btn.btn2 {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #2e7d32;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn.btn2:hover {
+  background: #1b5e20;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(46,125,50,0.3);
+}
+
+#msg {
+  display: block;
+  margin-top: 10px;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.2) rotate(15deg);
+  box-shadow: 0 8px 20px rgba(0, 200, 83, 0.4);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<!-----------------------------footer----------------------------------->
+  <!-- Footer Start -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="footer-container">
+        <div class="footer-column about">
+          <img src="imag/devmatrixlab.png" alt="Logo" class="footer-logo">
+          <p>
+            DevMatrixLab is a unit of DevMatrix Educational Consultancy. Since its inception in 2015, the company has guided over 500 PhD candidates in their research journey. Originally established in Hyderabad,Chennai,bengaluru and Guntur DevMatrixLab continues to support doctoral scholars with expert consultation and tailored research assistance. Clients interested in discussing their doctoral research can schedule meetings any day between 9:00 AM and 9:00 PM at our office location.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.threads.net/@devmatrixlab"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/devmatrixlab?utm_source=qr&igsh=MWdtODdkbnZnYmN2cA== "><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column links">
+          <h4>LINKS</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="assignement.html">Assignment</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="research topics.html">Research Topics</a></li>
+                <li><a href="a-z development.html">A-Z development</a></li>
+                <li><a href="why devmatrixlab.html">Why Devmatrixlab</a></li>
+                <li><a href="contact n.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column support">
+          <h4>SUPPORT</h4>
+          <div class="support-info">
+            <i class="fas fa-envelope"></i> devmatrixlab@gmail.com
+          </div>
+          <div class="support-info">
+            <i class="fas fa-phone"></i> 9347967147
+          </div>
+          <div class="support-info">
+            <i class="fas fa-mobile-alt"></i> 7207494254
+          </div>
+        </div>
+
+        <div class="footer-column address">
+          <h4>ADDRESS</h4>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              OFFICE 1 <br>
+              Beside AAA Mall, upside of Bata ShowRoom, Ameerpet, Hyderabad, Telangana-500016
+            </li><br>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              OFFICE 2 <br>
+              beside marina mall, near toll plaz, navalur, chennai, Tamil Nadu
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              OFFICE 3 <br>
+              Beside of Guntur Bus Stop, Guntur, Andhra Pradesh
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© Copyright 2019. All Rights Reserved By <span>DevMatrixLab</span></p>
+      <div class="footer-links">
+        <a href="#">TERMS OF USER</a> |
+        <a href="#">LICENSE</a> |
+        <a href="#">SUPPORT</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+<style>
+    /* ---------- FOOTER ---------- */
+/* ---------- FOOTER ---------- */
+#footer {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #e5e5e5;
+  font-family: "Poppins", sans-serif;
+  margin-top: 60px;
+  border-top: 3px solid #00c896;
+}
+
+.footer-top {
+  padding: 60px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-column {
+  padding: 10px;
+}
+
+.footer-logo {
+  width: 140px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.footer-column h4::after {
+  content: "";
+  width: 45px;
+  height: 3px;
+  background: #00c896;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  border-radius: 2px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #cccccc;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.footer-column ul li a {
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #00c896;
+  padding-left: 6px;
+}
+
+.support-info {
+  margin: 12px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #bbbbbb;
+}
+
+.support-info i {
+  color: #00c896;
+}
+
+.social-links {
+  margin-top: 25px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 14px;
+  color: #bbbbbb;
+  font-size: 20px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #00c896;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 200, 150, 0.4);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid #2a2a2a;
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 13px;
+  background: #0d0d0d;
+}
+
+.footer-bottom span {
+  color: #00c896;
+  font-weight: 600;
+}
+
+.footer-bottom .footer-links {
+  margin-top: 8px;
+}
+
+.footer-bottom .footer-links a {
+  color: #bbbbbb;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-bottom .footer-links a:hover {
+  color: #00c896;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-column h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-links {
+    margin-top: 15px;
+  }
+}
+
+</style>
+
+
+</body>
+</html>
+
+
+
+
+
+

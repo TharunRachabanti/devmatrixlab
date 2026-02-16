@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index,follow">
+    <meta name="keywords" content="Literature Review Writing, PhD Literature Review, Dissertation Literature Review, Thesis Literature Review Services, Academic Literature Review, Research Paper Literature Review, Literature Gap Identification, Systematic Literature Review, Critical Literature Review, Review of Related Literature, Literature Review Help, Scholarly Literature Review, Literature Review Editing, Literature Review Proofreading, Dissertation Chapter 2 Writing, Literature Review Support, Academic Writing Services, Research Methodology Review, Literature Review Assistance, Devmatrixlab Literature Review Services" />
+
+  
+    <meta name="description" content="Devmatrixlab provides expert Literature Review Writing support for PhD scholars. Get structured reviews, research gap analysis, citations & academic precision." />
+
+  
+  <title>Literature Review Service - DevMatrixLab</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Your SEO structured data -->
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "DevMatrixLab",
+    "url": "https://devmatrixlab.com",
+    "logo": "https://devmatrixlab.com/logo.png",
+    "sameAs": [
+      "https://www.facebook.com/devmatrixlab",
+      "https://www.linkedin.com/company/devmatrixlab"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+91-9347967147",
+      "contactType": "customer service"
+    }
+  }
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "DevMatrixLab",
+  "image": "https://devmatrixlab.com/logo.png",
+  "url": "https://devmatrixlab.com",
+  "telephone": "+91-9876543210",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Your Street Address, Kukatpally",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "500072",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo,Tu,We,Th,Fr 09:00-18:00",
+  "sameAs": [
+    "https://www.facebook.com/devmatrixlab",
+    "https://www.linkedin.com/company/devmatrixlab",
+    "https://twitter.com/devmatrixlab"
+  ]
+}
+</script>
+
+
+  <style>
+    body {
+      margin: 0px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Top header */
+    .top-header {
+      background: #008080;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 50px;
+      font-size: 14px;
+      flex-wrap: wrap;
+    }
+
+    .top-header i {
+      margin-right: 8px;
+      color: white;
+    }
+
+    .contact-info {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      color: white;
+      margin-left: 12px;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: white;
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 1000;
+      
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      position: relative;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #008080;
+    }
+
+    .navbar ul li i {
+      color: #7ab800;
+      margin-left: 4px;
+    }
+
+    /* Dropdown */
+    .navbar ul li ul.dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: none;
+      min-width: 220px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+
+    .navbar ul li ul.dropdown li a {
+      display: block;
+      padding: 12px 15px;
+      color: black;
+      font-weight: 400;
+    }
+
+    .navbar ul li ul.dropdown li a:hover {
+      background: #f5f5f5;
+      color: #008080;
+    }
+
+    /* Hover effect for desktop */
+    .navbar ul li:hover > ul.dropdown {
+      display: block;
+    }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #008080;
+    }
+
+    /* Overlay */
+    #overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+      z-index: 1500;
+    }
+    #overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Mobile Menu */
+    @media (max-width: 768px) {
+      .hamburger { display: block; }
+
+      .navbar nav {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 240px;
+        height: 100%;
+        background: #fff;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+        transition: right 0.4s ease;
+        z-index: 2001;
+        padding: 20px;
+        
+      }
+
+      .navbar nav.active { right: 0; }
+
+      .navbar nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        margin-top: 40px;
+        gap: 10px;
+        width: 100%;
+      }
+
+      .navbar nav ul li a {
+        display: block;
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+
+      .navbar nav ul li a:hover {
+        background: #f2f2f2;
+        color: #008080;
+      }
+
+      /* Mobile dropdown */
+      .navbar ul li ul.dropdown {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        padding-left: 10px;
+      }
+      .dropdown-parent.active ul.dropdown { display: block; }
+      .navbar ul li ul.dropdown li a {
+        padding-left: 30px;
+      }
+
+      /* Close button */
+      .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 26px;
+        color: #008080;
+        cursor: pointer;
+      }
+    }
+
+    /* Banner Section */
+    .hero {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      background: url("imag/Literature\ review\ ser.png") no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 20px;
+    }
+
+    .hero h1 { font-size: 48px; font-weight: bold; }
+    .hero h1 span { color: #7ab800; }
+    .hero p { margin-top: 10px; font-size: 18px; }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 30px;
+      background: #7ab800;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover { background: #5a8d00; }
+
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 28px; }
+      .hero p { font-size: 14px; }
+      .btn { padding: 10px 20px; font-size: 14px; }
+    }
+
+    @media (max-width: 480px) {
+      .logo img { height: 40px; }
+      .hero { height: 70vh; }
+      .hero h1 { font-size: 22px; }
+      .hero p { font-size: 13px; }
+      .btn { font-size: 13px; padding: 8px 18px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Header -->
+  <div class="top-header">
+    <div class="contact-info">
+      <i class="fa-solid fa-envelope"></i> devmatrixlab@gmail.com
+      <i class="fa-solid fa-phone"></i> +91 7207494254
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-telegram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="imag/devmatrixlab.png" alt="DevMatrixLab Logo">
+    </div>
+    <button class="hamburger" onclick="toggleMenu()"><i class="fa fa-bars"></i></button>
+    
+
+    <div id="overlay" onclick="toggleMenu()"></div>
+
+    <nav id="nav-menu">
+      
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About us</a></li>
+
+        <!-- Services Dropdown -->
+        <li class="dropdown-parent">
+          <a href="#">Services <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="thesis.html">Thesis Writing & Editing</a></li>
+            <li><a href="Dissertation Writing Service.html">Dissertation Writing</a></li>
+            <li><a href="research paper writing.html">Research Paper Writing</a></li>
+            <li><a href="Proofreading Service.html">Proofreading Service</a></li>
+            <li><a href="implementation.html">Implementation</a></li>
+            <li><a href="Literature Review.html">Literature Review</a></li>
+            <li><a href="methodology.html">Research Methodology</a></li>
+            <li><a href="journal paper publication.html">Journal Paper Publication</a></li>
+            <li><a href="research preposal.html">Research Proposal</a></li>
+          </ul>
+        </li>
+
+        <!-- Journal Publication Dropdown -->
+        <li class="dropdown-parent">
+          <a href="#">Journal Publication <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="sci indexed journal.html">SCI Journals</a></li>
+            <li><a href="scopus indexed journal.html">Scopus Journals</a></li>
+          </ul>
+        </li>
+
+        <!-- Research Topics -->
+         <li><a href="assignement.html">Assignment</a></li>
+         <li><a href="projects.html">Projects</a></li>
+         <li><a href="a-z development.html">A-Z Development</a></li>
+        <li><a href="research topics.html">Research Topics</a></li>
+        <li><a href="why devmatrixlab.html">Why DevMatrixLab</a></li>
+        <li><a href="contact n.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner Section -->
+  <section class="hero">
+    <div class="hero-content">
+      
+      <h1>Welcome to <span>DevMatrixLab</span></h1>
+      <p>PhD Consultancy in Hyderabad | literature Review Service</p>
+      
+    </div>
+  </section>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-menu").classList.toggle("active");
+      document.getElementById("overlay").classList.toggle("active");
+    }
+
+    // Toggle dropdowns on mobile
+    document.querySelectorAll('.dropdown-parent > a').forEach(item => {
+      item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          let parent = this.parentElement;
+
+          document.querySelectorAll('.dropdown-parent').forEach(el => {
+            if (el !== parent) el.classList.remove('active');
+          });
+
+          parent.classList.toggle('active');
+        }
+      });
+    });
+  </script>
+
+<!------------------------------------------------------------------------------------------------------------------------->
+<!-- Literature Review Section -->
+<section class="literature-review-section">
+  <div class="container">
+    <h2 class="section-title">Literature Review Services</h2>
+
+    <div class="literature-content">
+      <div class="literature-item fade-in">
+        <h3>Why Literature Review is Crucial</h3>
+        <p>
+          Ever wondered why over 70% of academic research projects begin with a well-structured literature review? 
+          A literature review not only summarizes past work but also highlights gaps, compares findings, and sets the stage for your own research direction. 
+          It’s the roadmap that connects your study with existing knowledge.
+        </p>
+      </div>
+
+      <div class="literature-item fade-in">
+        <h3>Tailored Expert Support</h3>
+        <p>
+          At DevMatrixLab, we simplify the entire process—selecting credible sources, organizing ideas, and building a clear narrative. 
+          Our experts ensure your literature review is tailored to your domain, whether you're working on a thesis, dissertation, or journal paper. 
+          You get structured, insightful content that reflects both depth and clarity.
+        </p>
+      </div>
+
+      <div class="literature-item fade-in">
+        <h3>Focus on Academic Excellence</h3>
+        <p>
+          We also emphasize critical aspects like conceptual and theoretical frameworks, annotated bibliographies, gap identification, 
+          and reference collection. Every element is carefully crafted to align with your research goals and academic standards, making your work truly stand out.
+        </p>
+      </div>
+
+      <div class="literature-item fade-in">
+        <h3>Get Professional Assistance</h3>
+        <p>
+          “Looking for expert help with your literature review?” 
+          Connect with our team to ensure your academic research is thorough, structured, and publication-ready.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+/* Literature Review Section */
+.literature-review-section {
+  background: linear-gradient(135deg, #f4f9f8, #eafaf7);
+  padding: 60px 20px;
+  width: 95%;
+  overflow-x: hidden;
+}
+
+.literature-review-section .container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #008080;
+  margin-bottom: 50px;
+  letter-spacing: 1px;
+  animation: fadeDown 1s ease-in-out;
+}
+
+/* Grid Layout */
+.literature-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+/* Card Styling */
+.literature-item {
+  background: #fff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  opacity: 0; /* hidden initially */
+  transform: translateY(40px) scale(0.95);
+}
+
+/* On hover */
+.literature-item:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Headings */
+.literature-item h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #00796b;
+}
+
+/* Paragraph */
+.literature-item p {
+  color: #444;
+  line-height: 1.7;
+  font-size: 1rem;
+  text-align: justify;   /* ✅ Justify text */
+  text-justify: inter-word; /* ✅ Better word spacing */
+}
+
+/* Animations */
+.animate-card {
+  animation: fadeUp 1s forwards;
+}
+
+.animate-card:nth-child(1) { animation-delay: 0.2s; }
+.animate-card:nth-child(2) { animation-delay: 0.4s; }
+.animate-card:nth-child(3) { animation-delay: 0.6s; }
+.animate-card:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(40px) scale(0.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .section-title {
+    font-size: 2rem;
+  }
+  .literature-item {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-title {
+    font-size: 1.7rem;
+  }
+  .literature-item {
+    padding: 18px;
+  }
+  .literature-item h3 {
+    font-size: 1.2rem;
+  }
+  .literature-item p {
+    font-size: 0.92rem;
+  }
+}
+</style>
+<!------------------------------------------------------------------------------------------------------------------->
+<!-- Literature Review Highlights Section -->
+<section class="literature-highlights">
+  <div class="container">
+    <!-- Key Elements -->
+    <h2 class="section-title">Key Elements In A <span>Literature Review</span></h2>
+    <div class="elements-grid">
+      <div class="element-item">🌿 Conceptual Framework</div>
+      <div class="element-item">🌿 Theoretical Framework</div>
+      <div class="element-item">🌿 References Collection</div>
+      <div class="element-item">🌿 Gap Identification</div>
+      <div class="element-item">🌿 Annotated Bibliography</div>
+      <div class="element-item">🌿 Theorem Development</div>
+    </div>
+
+    <!-- Why Hiring a Professional -->
+    <h2 class="section-title mt-40">Why Choosing A Professional For <span>Literature Review</span> Is A Smart Move</h2>
+<div class="why-professional">
+  <div class="reason fade-in">
+    <h3>Access to Reliable Sources</h3>
+    <p>Skilled writers know how to locate credible, peer-reviewed articles relevant to your topic. This not only saves valuable time but also guarantees your review rests on trustworthy research.</p>
+  </div>
+  <div class="reason fade-in">
+    <h3>Clear and Organized Writing</h3>
+    <p>Professionals structure the review logically—categorizing studies, highlighting trends, and building a strong narrative that supports your research goals.</p>
+  </div>
+  <div class="reason fade-in">
+    <h3>Identifying Research Gaps</h3>
+    <p>Experts are trained to detect overlooked areas and inconsistencies in prior work, helping you establish a solid rationale for your study and emphasize its uniqueness.</p>
+  </div>
+  <div class="reason fade-in">
+    <h3>Accurate Referencing and Formal Style</h3>
+    <p>A professional ensures all sources are properly cited while maintaining an academic tone, reducing plagiarism risks and strengthening the authority of your paper.</p>
+  </div>
+  <div class="reason fade-in">
+    <h3>Time-Saving and Stress-Free</h3>
+    <p>Balancing deadlines and coursework can be overwhelming—outsourcing your literature review allows you to focus on other priorities while ensuring top-quality work.</p>
+  </div>
+</div>
+    </div>
+  </div>
+</section>
+
+<!-- CSS -->
+<style>
+.literature-highlights {
+  background: #f4f9f8;
+  padding: 60px 20px;
+  width: 90%;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #2e7d32;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.section-title span {
+  color: #008080;
+}
+
+/* Elements Grid */
+.elements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.element-item {
+  background: #fff;
+  padding: 18px 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  font-weight: 500;
+  color: #444;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.element-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Why Professional Grid */
+.why-professional {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+}
+
+.reason h3 {
+  font-size: 1.2rem;
+  color: #00796b;
+  margin-bottom: 8px;
+}
+.reason p {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+/* Animations */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s forwards;
+}
+.fade-in:nth-child(1) { animation-delay: 0.2s; }
+.fade-in:nth-child(2) { animation-delay: 0.4s; }
+.fade-in:nth-child(3) { animation-delay: 0.6s; }
+.fade-in:nth-child(4) { animation-delay: 0.8s; }
+.fade-in:nth-child(5) { animation-delay: 1s; }
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .elements-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  .section-title {
+    font-size: 1.6rem;
+  }
+}
+@media (max-width: 576px) {
+  .elements-grid {
+    grid-template-columns: 1fr;
+  }
+  .reason h3 {
+    font-size: 1.1rem;
+  }
+  .reason p {
+    font-size: 0.95rem;
+  }
+}
+</style>
+</body>
+</html>
+<!------------------------------------------------------------------------------------------------------------------>
+
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      color: #333;
+      background: #fff;
+      width: 100%;
+    }
+
+    .section {
+      max-width: 1150px;
+      margin: auto;
+      padding: 50px 20px;
+    }
+
+    .section h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #1a7b42;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .flex-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+      margin-bottom: 50px;
+    }
+
+    .flex-box img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .flex-box ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .flex-box li {
+      margin-bottom: 14px;
+      font-size: 1rem;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #1a7b42;
+    }
+
+    .why-choose {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      gap: 40px;
+    }
+
+    .why-choose img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    }
+
+    .why-choose h3 {
+      font-size: 1.3rem;
+      margin: 18px 0 8px;
+      color: #111;
+    }
+
+    .why-choose p {
+      font-size: 1rem;
+      margin-bottom: 15px;
+      color: #555;
+    }
+
+    .quote {
+      text-align: center;
+      font-style: italic;
+      margin-top: 30px;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(25px);
+      animation: fadeInUp 1s forwards;
+    }
+
+    .fade-in:nth-child(1) { animation-delay: 0.2s; }
+    .fade-in:nth-child(2) { animation-delay: 0.4s; }
+    .fade-in:nth-child(3) { animation-delay: 0.6s; }
+    .fade-in:nth-child(4) { animation-delay: 0.8s; }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .flex-box,
+      .why-choose {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .flex-box ul {
+        text-align: left;
+        max-width: 90%;
+        margin: auto;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .section {
+        padding: 30px 15px;
+      }
+
+      .section h2 {
+        font-size: 1.6rem;
+      }
+
+      .why-choose h3 {
+        font-size: 1.15rem;
+      }
+
+      .why-choose p,
+      .flex-box li {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <section class="section">
+    <!-- Common Challenges -->
+    <h2 class="fade-in">Common Challenges Faced By Scholars</h2>
+    <div class="flex-box">
+      <div class="fade-in">
+        <ul>
+          <li><span class="highlight">Limited Time:</span> Balancing academics, work, and personal life often makes it tough to meet strict research deadlines.</li>
+          <li><span class="highlight">Unclear Instructions:</span> Many students struggle to interpret academic guidelines or research protocols, causing confusion.</li>
+          <li><span class="highlight">Technical Barriers:</span> Using advanced tools like MATLAB, Python, or SPSS can be overwhelming without prior experience.</li>
+          <li><span class="highlight">Writing & Organization Issues:</span> Academic standards demand proper structure, grammar, and logical flow, which many find challenging.</li>
+          <li><span class="highlight">Plagiarism Risks:</span> Ensuring originality and accurate citations remains one of the biggest hurdles in research writing.</li>
+          <li><span class="highlight">Journal Rejections:</span> Small errors in formatting or structure often lead to repeated rejection from journals.</li>
+        </ul>
+      </div>
+      <div class="fade-in">
+        <img src="imag/issues.jpg" alt="Common Challenges in Research">
+      </div>
+    </div>
+
+    <!-- Why Choose -->
+    <h2 class="fade-in">Why Choose DevMatrixLab For Your Research Review?</h2>
+    <div class="why-choose">
+      <div class="fade-in">
+        <img src="imag/why.jpg" alt="Research Review Service">
+      </div>
+      <div class="fade-in">
+        <h3>Skilled Review Experts</h3>
+        <p>Our PhD-level specialists bring years of expertise, ensuring your work is clear, detailed, and aligned with the latest academic trends.</p>
+
+        <h3>Custom Review Framework</h3>
+        <p>We tailor every literature review to your research goals and institutional requirements, helping you build a strong foundation.</p>
+
+        <h3>Thorough Source Validation</h3>
+        <p>Only credible, up-to-date sources are included. We deliver 100% plagiarism-free, citation-accurate content you can trust.</p>
+
+        <h3>On-Time Delivery & Guidance</h3>
+        <p>We know deadlines matter—our quick turnaround and ongoing support ensure you’re never left behind in your research journey.</p>
+      </div>
+    </div>
+
+    <!-- Quote -->
+    <p class="quote fade-in">“Ready to elevate your research with a perfectly crafted literature review?”</p>
+  </section>
+
+<!------------------------------------------------------------------------------------------------------------------------>
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Us</h1>
+        <p><i class="fas fa-paper-plane"></i> devmatrixlab@gmail.com</p>
+        <p><i class="fas fa-phone-square-alt"></i> 9347967147</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.threads.net/@devmatrixlab"><i class="fab fa-twitter-square"></i></a>
+          <a href="https://www.instagram.com/devmatrixlab?utm_source=qr&igsh=MWdtODdkbnZnYmN2cA== "><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="text" name="Number" placeholder="Your Number" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <a href="https://wa.me/919347967147" target="_blank" class="whatsapp-float">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+  </a>
+</div>
+<style>
+/* Contact Section */
+#contact {
+  background: linear-gradient(135deg, #f9f9f9, #e8f5e9);
+  padding: 80px 10%;
+  font-family: 'Poppins', sans-serif;
+}
+
+#contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-left, .contact-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-left h1.sub-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  position: relative;
+  animation: slideInLeft 1s ease;
+}
+
+.contact-left p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #444;
+  animation: fadeIn 1s ease forwards;
+}
+
+.contact-left p i {
+  color: #2e7d32;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  margin-right: 15px;
+  color: #555;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #2e7d32;
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Contact Form */
+.contact-right form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  animation: slideInRight 1s ease;
+}
+
+.contact-right input, 
+.contact-right textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-right input:focus, 
+.contact-right textarea:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 8px rgba(46,125,50,0.4);
+}
+
+.btn.btn2 {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #2e7d32;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn.btn2:hover {
+  background: #1b5e20;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(46,125,50,0.3);
+}
+
+#msg {
+  display: block;
+  margin-top: 10px;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.2) rotate(15deg);
+  box-shadow: 0 8px 20px rgba(0, 200, 83, 0.4);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<!-----------------------------footer----------------------------------->
+  <!-- Footer Start -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="footer-container">
+        <div class="footer-column about">
+          <img src="imag/devmatrixlab.png" alt="Logo" class="footer-logo">
+          <p>
+            DevMatrixLab is a unit of DevMatrix Educational Consultancy. Since its inception in 2015, the company has guided over 500 PhD candidates in their research journey. Originally established in Hyderabad,Chennai,bengaluru and Guntur DevMatrixLab continues to support doctoral scholars with expert consultation and tailored research assistance. Clients interested in discussing their doctoral research can schedule meetings any day between 9:00 AM and 9:00 PM at our office location.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.threads.net/@devmatrixlab"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/devmatrixlab?utm_source=qr&igsh=MWdtODdkbnZnYmN2cA== "><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column links">
+          <h4>LINKS</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="assignement.html">Assignment</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="research topics.html">Research Topics</a></li>
+                <li><a href="a-z development.html">A-Z development</a></li>
+                <li><a href="why devmatrixlab.html">Why Devmatrixlab</a></li>
+                <li><a href="contact n.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column support">
+          <h4>SUPPORT</h4>
+          <div class="support-info">
+            <i class="fas fa-envelope"></i> devmatrixlab@gmail.com
+          </div>
+          <div class="support-info">
+            <i class="fas fa-phone"></i> 9347967147
+          </div>
+          <div class="support-info">
+            <i class="fas fa-mobile-alt"></i> 7207494254
+          </div>
+        </div>
+
+        <div class="footer-column address">
+          <h4>ADDRESS</h4>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              OFFICE 1 <br>
+              Beside AAA Mall, upside of Bata ShowRoom, Ameerpet, Hyderabad, Telangana-500016
+            </li><br>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              OFFICE 2 <br>
+              beside marina mall, near toll plaz, navalur, chennai, Tamil Nadu
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              OFFICE 3 <br>
+              Beside of Guntur Bus Stop, Guntur, Andhra Pradesh
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© Copyright 2019. All Rights Reserved By <span>DevMatrixLab</span></p>
+      <div class="footer-links">
+        <a href="#">TERMS OF USER</a> |
+        <a href="#">LICENSE</a> |
+        <a href="#">SUPPORT</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+<style>
+    /* ---------- FOOTER ---------- */
+/* ---------- FOOTER ---------- */
+#footer {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #e5e5e5;
+  font-family: "Poppins", sans-serif;
+  margin-top: 60px;
+  border-top: 3px solid #00c896;
+}
+
+.footer-top {
+  padding: 60px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-column {
+  padding: 10px;
+}
+
+.footer-logo {
+  width: 140px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.footer-column h4::after {
+  content: "";
+  width: 45px;
+  height: 3px;
+  background: #00c896;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  border-radius: 2px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #cccccc;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.footer-column ul li a {
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #00c896;
+  padding-left: 6px;
+}
+
+.support-info {
+  margin: 12px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #bbbbbb;
+}
+
+.support-info i {
+  color: #00c896;
+}
+
+.social-links {
+  margin-top: 25px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 14px;
+  color: #bbbbbb;
+  font-size: 20px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #00c896;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 200, 150, 0.4);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid #2a2a2a;
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 13px;
+  background: #0d0d0d;
+}
+
+.footer-bottom span {
+  color: #00c896;
+  font-weight: 600;
+}
+
+.footer-bottom .footer-links {
+  margin-top: 8px;
+}
+
+.footer-bottom .footer-links a {
+  color: #bbbbbb;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-bottom .footer-links a:hover {
+  color: #00c896;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-column h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-links {
+    margin-top: 15px;
+  }
+}
+
+</style>
+
+
+</body>
+</html>
+

@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  /* Premium Color Palette */
+  --primary-color: #ffffff;
+  --secondary-color: #f8f9fa;
+  --surface-light: #fafbfc;
+
+  /* Sophisticated Teal Palette */
+  --accent-color: #0a4d4e;
+  --accent-light: #1a7f7f;
+  --accent-lighter: #2da0a0;
+  --accent-dark: #063638;
+
+  /* Vibrant Green Palette */
+  --highlight-color: #6ab800;
+  --highlight-light: #8dd000;
+  --highlight-dark: #5a9e00;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #0a4d4e 0%, #1a7f7f 100%);
+  --gradient-accent: linear-gradient(135deg, #6ab800 0%, #8dd000 100%);
+  --gradient-overlay: linear-gradient(135deg, rgba(10, 77, 78, 0.95) 0%, rgba(26, 127, 127, 0.9) 100%);
+  --gradient-hero: linear-gradient(135deg, rgba(10, 77, 78, 0.92) 0%, rgba(26, 127, 127, 0.88) 50%, rgba(106, 184, 0, 0.15) 100%);
+  --gradient-card: linear-gradient(145deg, rgba(255, 255, 255, 0.9) 0%, rgba(248, 249, 250, 0.8) 100%);
+
+  /* Text Colors */
+  --text-main: #2c3e50;
+  --text-secondary: #5a6c7d;
+  --text-muted: #8494a5;
+  --heading-color: #1a202c;
+
+  /* Surface Colors */
+  --card-bg: #ffffff;
+  --surface-glass: rgba(255, 255, 255, 0.95);
+  --surface-glass-dark: rgba(255, 255, 255, 0.85);
+  --border-color: #e2e8f0;
+  --border-light: #f1f5f9;
+
+  /* Typography */
+  --font-main: 'Inter', 'Poppins', sans-serif;
+  --font-heading: 'Outfit', 'Poppins', sans-serif;
+  --font-fallback: 'Poppins', sans-serif;
+
+  /* Shadows - Multi-level elevation system */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.12);
+  --shadow-2xl: 0 20px 40px rgba(0, 0, 0, 0.15);
+  --shadow-glow: 0 0 20px rgba(106, 184, 0, 0.3);
+  --shadow-glow-accent: 0 0 30px rgba(26, 127, 127, 0.25);
+
+  /* Border Radius Scale */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 15px;
+  --radius-xl: 20px;
+  --radius-2xl: 30px;
+  --radius-full: 9999px;
+
+  /* Transition Timings */
+  --transition-fast: 150ms ease-in-out;
+  --transition-normal: 250ms ease-in-out;
+  --transition-slow: 400ms ease-in-out;
+
+  /* Spacing Scale */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  --space-2xl: 4rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-main);
+  background-color: var(--primary-color);
+  color: var(--text-main);
+  overflow-x: hidden;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography Enhancements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  color: var(--heading-color);
+  line-height: 1.25;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Utility Classes */
+.text-gradient {
+  background: var(--gradient-accent);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-primary {
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.section-padding {
+  padding: clamp(3rem, 5vw, 5rem) 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 clamp(1rem, 3vw, 2rem);
+}
+
+/* Modern Button System */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+  text-decoration: none;
+  border: none;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: var(--font-main);
+  position: relative;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transform: translateX(-100%);
+  transition: transform 0.6s;
+}
+
+.btn:hover::before {
+  transform: translateX(100%);
+}
+
+.btn:active {
+  transform: scale(0.98);
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important;
+}
+
+/* Primary Button - Vibrant Green Gradient */
+.btn-primary {
+  background: linear-gradient(135deg, #6ab800 0%, #8dd000 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(106, 184, 0, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(106, 184, 0, 0.45);
+  background: linear-gradient(135deg, #5ca700 0%, #7cc000 100%);
+}
+
+/* Secondary Button - Teal Gradient */
+.btn-secondary {
+  background: linear-gradient(135deg, #0a4d4e 0%, #1a7f7f 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(10, 77, 78, 0.35);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(10, 77, 78, 0.45);
+  background: linear-gradient(135deg, #083d3e 0%, #156969 100%);
+}
+
+/* Outline Button */
+.btn-outline {
+  background: transparent;
+  color: var(--accent-color);
+  border: 2px solid var(--accent-color);
+  box-shadow: 0 2px 8px rgba(10, 77, 78, 0.15);
+}
+
+.btn-outline:hover {
+  background: var(--accent-color);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(10, 77, 78, 0.3);
+}
+
+/* Accent Button - Cyan/Highlight */
+.btn-accent {
+  background: linear-gradient(135deg, #1a7f7f 0%, #2ab8b8 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(26, 127, 127, 0.35);
+}
+
+.btn-accent:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(26, 127, 127, 0.45);
+  background: linear-gradient(135deg, #156969 0%, #24a0a0 100%);
+}
+
+/* Success Button */
+.btn-success {
+  background: linear-gradient(135deg, #28a745 0%, #34ce57 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.35);
+}
+
+.btn-success:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(40, 167, 69, 0.45);
+  background: linear-gradient(135deg, #218838 0%, #2bb34b 100%);
+}
+
+/* Danger/Warning Button */
+.btn-danger {
+  background: linear-gradient(135deg, #dc3545 0%, #f56470 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.35);
+}
+
+.btn-danger:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(220, 53, 69, 0.45);
+  background: linear-gradient(135deg, #c82333 0%, #e04b5a 100%);
+}
+
+/* White/Light Button */
+.btn-white {
+  background: white;
+  color: var(--accent-color);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-white:hover {
+  background: var(--surface-light);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Ghost Button */
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateY(-3px);
+}
+
+/* Button Sizes */
+.btn-sm {
+  padding: 0.625rem 1.5rem;
+  font-size: 0.875rem;
+}
+
+.btn-lg {
+  padding: 1.125rem 2.5rem;
+  font-size: 1.125rem;
+}
+
+.btn-xl {
+  padding: 1.35rem 3rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+/* Button with Icon */
+.btn-icon {
+  padding: 0.875rem 1.75rem 0.875rem 1.5rem;
+}
+
+.btn-icon svg {
+  transition: transform 0.3s ease;
+}
+
+.btn-icon:hover svg {
+  transform: translateX(4px);
+}
+
+/* Full Width Button */
+.btn-block {
+  width: 100%;
+  display: flex;
+}
+
+/* Button Group */
+.btn-group {
+  display: inline-flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Responsive Button Adjustments */
+@media (max-width: 768px) {
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 0.9375rem;
+  }
+
+  .btn-lg {
+    padding: 1rem 2rem;
+    font-size: 1.0625rem;
+  }
+
+  .btn-xl {
+    padding: 1.125rem 2.25rem;
+    font-size: 1.125rem;
+  }
+}

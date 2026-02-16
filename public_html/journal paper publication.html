@@ -1,0 +1,1339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Journal Paper Publication - DevMatrixLab</title>
+  <meta name="description" content="Affordable PhD Thesis Writing Services with expert guidance, research support, proofreading, editing, and publication assistance. Trusted by 1000+ students worldwide.">
+  <meta name="keywords" content="thesis writing service, PhD thesis help, research support, dissertation writing, academic writing services, DevMatrixLab">
+  <meta name="author" content="DevMatrixLab">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Thesis Writing Service | DevMatrixLab">
+  <meta property="og:description" content="Get expert help with your PhD thesis writing, editing, and publication. Affordable and reliable academic services.">
+  <meta property="og:image" content="images/thesis-service.jpg">
+  <meta property="og:url" content="https://yourwebsite.com/thesis-writing.html">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      line-height: 1.6;
+      background: #fdfdfd;
+      color: #333;
+    }
+
+    /* Top header */
+    .top-header {
+      background: #008080;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 50px;
+      font-size: 14px;
+      flex-wrap: wrap;
+    }
+
+    .top-header i {
+      margin-right: 8px;
+      color: white;
+    }
+
+    .contact-info {
+      display: flex;
+      gap: 15px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .social-icons {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .social-icons a {
+      color: white;
+      margin-left: 12px;
+      font-size: 16px;
+      text-decoration: none;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      background: white;
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.1);
+      position: relative;
+      z-index: 1000;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 30px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar ul li {
+      position: relative;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover {
+      color: #008080;
+    }
+
+    .navbar ul li i {
+      color: #7ab800;
+      margin-left: 4px;
+    }
+
+    /* Dropdown */
+    .navbar ul li ul.dropdown {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background: white;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+      display: none;
+      min-width: 220px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 1000;
+    }
+
+    .navbar ul li ul.dropdown li a {
+      display: block;
+      padding: 12px 15px;
+      color: black;
+      font-weight: 400;
+    }
+
+    .navbar ul li ul.dropdown li a:hover {
+      background: #f5f5f5;
+      color: #008080;
+    }
+
+    /* Hover effect for desktop */
+    .navbar ul li:hover > ul.dropdown {
+      display: block;
+    }
+
+    /* Hamburger Button */
+    .hamburger {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      color: #008080;
+    }
+
+    /* Overlay */
+    #overlay {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s ease;
+      z-index: 1500;
+    }
+    #overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    /* Mobile Menu */
+    @media (max-width: 768px) {
+      .hamburger { display: block; }
+
+      #nav-menu {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        right: -280px;
+        width: 240px;
+        height: 100%;
+        background: #fff;
+        box-shadow: -2px 0 8px rgba(0,0,0,0.3);
+        transition: right 0.4s ease;
+        z-index: 2001;
+        padding: 20px;
+      }
+
+      #nav-menu.active { right: 0; }
+
+      #nav-menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0;
+        margin-top: 40px;
+        gap: 10px;
+        width: 100%;
+      }
+
+      #nav-menu ul li a {
+        display: block;
+        width: 100%;
+        padding: 12px 10px;
+        font-size: 16px;
+        border-radius: 6px;
+        transition: 0.3s;
+      }
+
+      #nav-menu ul li a:hover {
+        background: #f2f2f2;
+        color: #008080;
+      }
+
+      /* Mobile dropdown */
+      #nav-menu ul li ul.dropdown {
+        position: static;
+        display: none;
+        width: 100%;
+        box-shadow: none;
+        padding-left: 10px;
+      }
+      .dropdown-parent.active ul.dropdown { display: block; }
+      #nav-menu ul li ul.dropdown li a {
+        padding-left: 30px;
+      }
+
+      /* Close button */
+      .close-btn {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 26px;
+        color: #008080;
+        cursor: pointer;
+      }
+    }
+
+    /* Banner Section */
+    .banner {
+      position: relative;
+      width: 100%;
+      height: 90vh;
+      background: url("imag/journal\ paper\ publication.jpg") no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+
+    .banner::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .banner h1 { font-size: 48px; font-weight: bold; z-index: 2; position: relative; }
+    .banner p { margin-top: 10px; font-size: 18px; z-index: 2; position: relative; }
+
+    @media (max-width: 768px) {
+      .banner h1 { font-size: 28px; }
+      .banner p { font-size: 14px; }
+    }
+
+    @media (max-width: 480px) {
+      .logo img { height: 40px; }
+      .banner { height: 70vh; }
+      .banner h1 { font-size: 22px; }
+      .banner p { font-size: 13px; }
+    }
+
+    /* Service Section */
+    .service-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 10%;
+      flex-wrap: wrap;
+    }
+    .service-left {
+      flex: 1;
+      background: #c4ff4d;
+      padding: 40px;
+      max-width: 400px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 22px;
+      color: #000;
+      line-height: 1.4em;
+      margin-bottom: 20px;
+    }
+    .service-right {
+      flex: 2;
+      padding: 20px 40px;
+    }
+    .service-right h2 {
+      color: #6bb800;
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+    .service-right p {
+      font-size: 16px;
+      line-height: 1.7em;
+      margin-bottom: 15px;
+    }
+    .highlight-points p {
+      background: #f7f7f7;
+      padding: 8px 12px;
+      border-left: 4px solid #6bb800;
+      margin: 8px 0;
+      font-weight: 500;
+    }
+    .tagline {
+      margin-top: 20px;
+      font-weight: bold;
+      font-size: 18px;
+      color: #000;
+    }
+
+    /* Why Section */
+    .why-section {
+      padding: 60px 10%;
+      background: #f4f4f4;
+    }
+    .why-section h2 {
+      font-size: 32px;
+      color: #6bb800;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    .why-section h3 {
+      font-size: 20px;
+      margin-top: 25px;
+      margin-bottom: 10px;
+      color: #222;
+    }
+    .why-section p {
+      font-size: 16px;
+      line-height: 1.7em;
+      margin-bottom: 15px;
+    }
+
+/* Thesis Topic Assistance Section */
+.topic-assist-section {
+  padding: 60px 10%;
+  background: #f0f8f5;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 40px;
+}
+
+.topic-assist-section .topic-image {
+  flex: 1 1 45%;
+}
+
+.topic-assist-section .topic-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.topic-assist-section .topic-text {
+  flex: 1 1 50%;
+}
+
+.topic-assist-section h2 {
+  color: #6bb800;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.topic-assist-section p {
+  font-size: 16px;
+  line-height: 1.7em;
+  margin-bottom: 15px;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .topic-assist-section {
+    flex-direction: column;
+  }
+
+  .topic-assist-section .topic-image,
+  .topic-assist-section .topic-text {
+    flex: 1 1 100%;
+  }
+}
+
+
+  </style>
+</head>
+<body>
+  <!-- Top Header -->
+  <div class="top-header">
+    <div class="contact-info">
+      <i class="fa-solid fa-envelope"></i> devmatrixlab@gmail.com
+      <i class="fa-solid fa-phone"></i> +91 7207494254
+    </div>
+    <div class="social-icons">
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-telegram"></i></a>
+      <a href="#"><i class="fab fa-linkedin"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="imag/devmatrixlab.png" alt="DevMatrixLab Logo">
+    </div>
+    <!-- Hamburger Button -->
+    <span class="hamburger" onclick="toggleMenu()">&#9776;</span>
+
+    <!-- Navigation Menu -->
+    <nav id="nav-menu">
+      <span class="close-btn" onclick="toggleMenu()">&times;</span>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html">About us</a></li>
+
+        <!-- Services Dropdown -->
+        <li class="dropdown-parent">
+          <a href="#">Services <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="thesis.html">Thesis Writing & Editing</a></li>
+            <li><a href="Dissertation Writing Service.html">Dissertation Writing</a></li>
+            <li><a href="research paper writing.html">Research Paper Writing</a></li>
+            <li><a href="Proofreading Service.html">Proofreading Service</a></li>
+            <li><a href="implementation.html">Implementation</a></li>
+            <li><a href="Literature Review.html">Literature Review</a></li>
+            <li><a href="methodology.html">Research Methodology</a></li>
+            <li><a href="journal paper publication.html">Journal Paper Publication</a></li>
+            <li><a href="research preposal.html">Research Proposal</a></li>
+          </ul>
+        </li>
+
+        <!-- Journal Publication Dropdown -->
+        <li class="dropdown-parent">
+          <a href="#">Journal Publication <i class="fa-solid fa-caret-down"></i></a>
+          <ul class="dropdown">
+            <li><a href="sci indexed journal.html">SCI Journals</a></li>
+            <li><a href="scopus indexed journal.html">Scopus Journals</a></li>
+          </ul>
+        </li>
+
+        <!-- Research Topics -->
+         <li><a href="assignement.html">Assignment</a></li>
+         <li><a href="projects.html">Projects</a></li>
+         <li><a href="a-z development.html">A-Z development</a></li>
+        <li><a href="research topics.html">Research Topics</a></li>
+        <li><a href="why devmatrixlab.html">Why DevMatrixLab</a></li>
+        <li><a href="contact n.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Banner -->
+  <section class="banner">
+    <div>
+  <h1>Journal Paper Publication</h1>
+  <p>SCI & Scopus Indexed | Peer-Reviewed | End-to-End Publication Support</p>
+</div>
+
+  </section>
+
+  <!-- ✅ JS to open/close hamburger menu -->
+  <script>
+    function toggleMenu() {
+      document.getElementById("nav-menu").classList.toggle("active");
+      document.getElementById("overlay").classList.toggle("active");
+    }
+
+    // Toggle dropdowns on mobile
+    document.querySelectorAll('.dropdown-parent > a').forEach(item => {
+      item.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768) {
+          e.preventDefault();
+          let parent = this.parentElement;
+
+          document.querySelectorAll('.dropdown-parent').forEach(el => {
+            if (el !== parent) el.classList.remove('active');
+          });
+
+          parent.classList.toggle('active');
+        }
+      });
+    });
+  </script>
+
+<!------------------------------------------------------------------------------------------------------------>
+<style>
+    /* General Styling */
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #333;
+    }
+
+    /* Hero Section */
+    .hero {
+      background: linear-gradient(135deg, #0d9488, #7ab800);
+      color: #fff;
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeInDown 1.5s ease;
+    }
+
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      animation: slideIn 2s ease;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      animation: fadeInUp 2s ease;
+    }
+
+    /* Content Section */
+    .content {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      animation: fadeIn 2s ease;
+    }
+
+    .content h2 {
+      font-size: 2rem;
+      color: #13f191;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .content p {
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+
+    /* Animations */
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-50px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+      .hero p {
+        font-size: 1rem;
+      }
+      .content h2 {
+        font-size: 1.6rem;
+      }
+      .content p {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero {
+        padding: 60px 15px;
+      }
+      .hero h1 {
+        font-size: 1.8rem;
+      }
+      .hero p {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Journal Paper Publication Services by DevMatrixLab</h1>
+    <p>
+      Turning your research into a published paper is more than having strong results—it's about presenting your work with clarity, precision, and in line with journal requirements.
+    </p>
+  </section>
+
+  <!-- Content Section -->
+  <section class="content">
+    <h2>Why Publish with DevMatrixLab?</h2>
+    <p>
+      At DevMatrixLab, we assist you throughout the entire publication journey, ensuring your manuscript meets global quality standards and attracts reviewers' attention.
+    </p>
+    <p>
+      Our services are designed for PhD scholars, researchers, and academicians looking for a seamless and stress-free publishing process. From topic selection and drafting to editing and final submission—we’ve got you covered.
+    </p>
+    <p>
+      We also provide thesis-to-article conversion, transforming your dissertation into a concise, impactful research paper. Our experienced consultants specialize in formatting, proofreading, and compliance for Scopus, SCI, IEEE, and other reputed journals.
+    </p>
+    <p>
+      Don’t struggle alone—professional guidance saves time and maximizes your chances of acceptance. DevMatrixLab offers affordable, high-quality publication support tailored to your research goals.
+    </p>
+  </section>
+
+<!---------------------------------------------------------------------------------------------------------------------->
+<!-- Full-Range Publication Support Section -->
+<!-- Full-Range Publication Support Section -->
+<section class="services">
+  <h2>Our Full-Range Publication Support</h2>
+  <div class="services-container">
+    
+    <div class="service-box">
+      <h3>Writing</h3>
+      <p>Our team develops clear, well-structured manuscripts that reflect your research objectives and follow the exact requirements of your target journal. We ensure logical flow, clarity, and impactful presentation of ideas.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Review & Checking</h3>
+      <p>We carefully review every section to spot gaps in reasoning, factual errors, and weak arguments. Our experts provide constructive feedback to strengthen your paper and improve its acceptance chances.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Language Polishing</h3>
+      <p>We refine your manuscript for grammar, fluency, and academic tone. Complex sentences are simplified for better readability while retaining technical accuracy and sophistication.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Formatting</h3>
+      <p>From citation styles to figure alignment, our formatting experts ensure your paper strictly adheres to journal submission guidelines. We also handle reference styling across formats like APA, MLA, IEEE, and more.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Final Prep</h3>
+      <p>Before submission, we conduct plagiarism checks, grammar scans, and completeness reviews. This ensures your paper is submission-ready with zero overlooked details.</p>
+    </div>
+
+    <div class="service-box">
+      <h3>Submission Management</h3>
+      <p>We help you identify the right journal, prepare professional cover letters, and monitor the manuscript tracking system until your paper is safely in the editor’s hands.</p>
+    </div>
+  </div>
+</section>
+
+<style>
+/* Section Styling */
+.services {
+  background: linear-gradient(135deg, #f0fdfa, #ecfeff);
+  padding: 70px 20px;
+  text-align: center;
+}
+
+.services h2 {
+  font-size: 2.3rem;
+  color: #0f766e;
+  margin-bottom: 50px;
+  font-weight: 700;
+  position: relative;
+  display: inline-block;
+}
+
+.services h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background: #14b8a6;
+  margin: 12px auto 0;
+  border-radius: 4px;
+}
+
+/* Grid Layout */
+.services-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 35px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Service Box */
+.service-box {
+  background: #fff;
+  padding: 30px 25px;
+  border-radius: 16px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.service-box::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle at center, rgba(20,184,166,0.15), transparent 60%);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.service-box:hover::before {
+  transform: scale(1);
+}
+
+.service-box:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+}
+
+.service-box h3 {
+  font-size: 1.4rem;
+  color: #0d9488;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.service-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .services h2 {
+    font-size: 1.9rem;
+  }
+  .service-box {
+    padding: 25px 20px;
+  }
+}
+</style>
+<!-------------------------------------------------------------------------------------------------------------->
+<!-- Simplifying Every Stage Section -->
+<section class="stage">
+  <div class="stage-header">
+    <h2>Simplifying Every Stage of Publication</h2>
+    <p>Academic publishing often feels overwhelming — strict deadlines, multiple revisions, formatting guidelines, and plagiarism checks can make the journey stressful. At <strong>DevMatrixLab</strong>, our expert editors from diverse disciplines ensure your research gets the guidance it deserves. We stand beside you at every step until your work reaches the right journal.</p>
+  </div>
+
+  <div class="stats">
+    <div class="stat-box">
+      <h3>13,500+</h3>
+      <p>Total Publications</p>
+    </div>
+    <div class="stat-box">
+      <h3>6,000+</h3>
+      <p>SCI-Indexed Papers</p>
+    </div>
+    <div class="stat-box">
+      <h3>13,000+</h3>
+      <p>Satisfied Scholars</p>
+    </div>
+  </div>
+</section>
+
+<!-- Why Choose Us Section -->
+<section class="why-us">
+  <h2>Why Choose DevMatrixLab?</h2>
+  <div class="why-container">
+    <div class="why-box">Manuscript structuring and formatting</div>
+    <div class="why-box">Plagiarism screening and correction</div>
+    <div class="why-box">Strategic journal selection</div>
+    <div class="why-box">Submission support and author registration</div>
+    <div class="why-box">Reviewer response drafting & revision guidance</div>
+    <div class="why-box">Peer review mentoring for PhD scholars</div>
+    <div class="why-box">Continuous submission tracking until approval</div>
+  </div>
+  <p class="closing">At DevMatrixLab, we don’t just support your research — we transform it into a <strong>published reality</strong>. Partner with us today and take your first confident step toward journal success!</p>
+</section>
+
+<style>
+/* Stage Section */
+.stage {
+  padding: 70px 20px;
+  background: linear-gradient(135deg, #f0f9ff, #e0f7fa);
+  text-align: center;
+}
+
+.stage-header h2 {
+  font-size: 2.2rem;
+  color: #0f766e;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.stage-header p {
+  max-width: 850px;
+  margin: 0 auto 40px;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #444;
+}
+
+/* Stats */
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.stat-box {
+  background: #fff;
+  border-radius: 16px;
+  padding: 30px 40px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.stat-box:hover {
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.stat-box h3 {
+  font-size: 2rem;
+  color: #0d9488;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.stat-box p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Why Us Section */
+.why-us {
+  padding: 80px 20px;
+  background: #f8fafc;
+  text-align: center;
+}
+
+.why-us h2 {
+  font-size: 2rem;
+  color: #0f766e;
+  margin-bottom: 45px;
+  font-weight: 700;
+  position: relative;
+}
+
+.why-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto 40px;
+}
+
+.why-box {
+  background: linear-gradient(135deg, #e0f2fe, #ccfbf1);
+  padding: 20px;
+  border-radius: 14px;
+  font-size: 1rem;
+  color: #333;
+  font-weight: 500;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+  transition: all 0.4s ease;
+  cursor: pointer;
+}
+
+.why-box:hover {
+  transform: translateY(-10px) scale(1.03);
+  background: linear-gradient(135deg, #bae6fd, #99f6e4);
+  box-shadow: 0 12px 20px rgba(0,0,0,0.15);
+}
+
+.closing {
+  font-size: 1.1rem;
+  color: #444;
+  max-width: 850px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+</style>
+<!------------------------------------------------------------------------------------------------------------------------>
+<div id="contact">
+  <div class="container">
+    <div class="row">
+      <div class="contact-left">
+        <h1 class="sub-title">Contact Us</h1>
+        <p><i class="fas fa-paper-plane"></i> devmatrixlab@gmail.com</p>
+        <p><i class="fas fa-phone-square-alt"></i> 9347967147</p>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="https://www.threads.net/@devmatrixlab"><i class="fab fa-twitter-square"></i></a>
+          <a href="https://www.instagram.com/devmatrixlab?utm_source=qr&igsh=MWdtODdkbnZnYmN2cA== "><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <div class="contact-right">
+        <form name="submit-to-google-sheet">
+          <input type="text" name="Name" placeholder="Your Name" required>
+          <input type="text" name="Number" placeholder="Your Number" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+          <button type="submit" class="btn btn2">Submit</button>
+        </form>
+        <span id="msg"></span>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <a href="https://wa.me/919347967147" target="_blank" class="whatsapp-float">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp">
+  </a>
+</div>
+<style>
+/* Contact Section */
+#contact {
+  background: linear-gradient(135deg, #f9f9f9, #e8f5e9);
+  padding: 80px 10%;
+  font-family: 'Poppins', sans-serif;
+}
+
+#contact .row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.contact-left, .contact-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.contact-left h1.sub-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2e7d32;
+  margin-bottom: 20px;
+  position: relative;
+  animation: slideInLeft 1s ease;
+}
+
+.contact-left p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+  color: #444;
+  animation: fadeIn 1s ease forwards;
+}
+
+.contact-left p i {
+  color: #2e7d32;
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+/* Social Icons */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  font-size: 1.8rem;
+  margin-right: 15px;
+  color: #555;
+  transition: all 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+  color: #2e7d32;
+  transform: scale(1.2) rotate(10deg);
+}
+
+/* Contact Form */
+.contact-right form {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  animation: slideInRight 1s ease;
+}
+
+.contact-right input, 
+.contact-right textarea {
+  width: 100%;
+  border: 1px solid #ccc;
+  outline: none;
+  padding: 12px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.contact-right input:focus, 
+.contact-right textarea:focus {
+  border-color: #2e7d32;
+  box-shadow: 0 0 8px rgba(46,125,50,0.4);
+}
+
+.btn.btn2 {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #2e7d32;
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn.btn2:hover {
+  background: #1b5e20;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(46,125,50,0.3);
+}
+
+#msg {
+  display: block;
+  margin-top: 10px;
+  color: #2e7d32;
+  font-weight: 500;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 25px;
+  right: 25px;
+  z-index: 999;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.2) rotate(15deg);
+  box-shadow: 0 8px 20px rgba(0, 200, 83, 0.4);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from { opacity: 0; transform: translateX(-50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { opacity: 0; transform: translateX(50px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+</style>
+
+<!-----------------------------footer----------------------------------->
+  <!-- Footer Start -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="footer-container">
+        <div class="footer-column about">
+          <img src="imag/devmatrixlab.png" alt="Logo" class="footer-logo">
+          <p>
+            DevMatrixLab is a unit of DevMatrix Educational Consultancy. Since its inception in 2015, the company has guided over 500 PhD candidates in their research journey. Originally established in Hyderabad,Chennai,bengaluru and Guntur DevMatrixLab continues to support doctoral scholars with expert consultation and tailored research assistance. Clients interested in discussing their doctoral research can schedule meetings any day between 9:00 AM and 9:00 PM at our office location.
+          </p>
+          <div class="social-links">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.threads.net/@devmatrixlab"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/devmatrixlab?utm_source=qr&igsh=MWdtODdkbnZnYmN2cA== "><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-column links">
+          <h4>LINKS</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+                <li><a href="index.html">About</a></li>
+                <li><a href="assignement.html">Assignment</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="research topics.html">Research Topics</a></li>
+                <li><a href="a-z development.html">A-Z development</a></li>
+                <li><a href="why devmatrixlab.html">Why Devmatrixlab</a></li>
+                <li><a href="contact n.html">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column support">
+          <h4>SUPPORT</h4>
+          <div class="support-info">
+            <i class="fas fa-envelope"></i> devmatrixlab@gmail.com
+          </div>
+          <div class="support-info">
+            <i class="fas fa-phone"></i> 9347967147
+          </div>
+          <div class="support-info">
+            <i class="fas fa-mobile-alt"></i> 7207494254
+          </div>
+        </div>
+
+        <div class="footer-column address">
+          <h4>ADDRESS</h4>
+          <ul>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              OFFICE 1 <br>
+              Beside AAA Mall, upside of Bata ShowRoom, Ameerpet, Hyderabad, Telangana-500016
+            </li><br>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              OFFICE 2 <br>
+              beside marina mall, near toll plaz, navalur, chennai, Tamil Nadu
+            </li>
+            <li>
+              <i class="fas fa-map-marker-alt"></i>
+              OFFICE 3 <br>
+              Beside of Guntur Bus Stop, Guntur, Andhra Pradesh
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>© Copyright 2019. All Rights Reserved By <span>DevMatrixLab</span></p>
+      <div class="footer-links">
+        <a href="#">TERMS OF USER</a> |
+        <a href="#">LICENSE</a> |
+        <a href="#">SUPPORT</a>
+      </div>
+    </div>
+  </footer>
+  <!-- Footer End -->
+<style>
+    /* ---------- FOOTER ---------- */
+/* ---------- FOOTER ---------- */
+#footer {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #e5e5e5;
+  font-family: "Poppins", sans-serif;
+  margin-top: 60px;
+  border-top: 3px solid #00c896;
+}
+
+.footer-top {
+  padding: 60px 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+}
+
+.footer-column {
+  padding: 10px;
+}
+
+.footer-logo {
+  width: 140px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.footer-column h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+.footer-column h4::after {
+  content: "";
+  width: 45px;
+  height: 3px;
+  background: #00c896;
+  position: absolute;
+  left: 0;
+  bottom: -8px;
+  border-radius: 2px;
+}
+
+.footer-column p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #cccccc;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin: 12px 0;
+  font-size: 14px;
+}
+
+.footer-column ul li a {
+  color: #bbbbbb;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-column ul li a:hover {
+  color: #00c896;
+  padding-left: 6px;
+}
+
+.support-info {
+  margin: 12px 0;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #bbbbbb;
+}
+
+.support-info i {
+  color: #00c896;
+}
+
+.social-links {
+  margin-top: 25px;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 14px;
+  color: #bbbbbb;
+  font-size: 20px;
+  width: 38px;
+  height: 38px;
+  line-height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.05);
+  text-align: center;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #00c896;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 200, 150, 0.4);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  border-top: 1px solid #2a2a2a;
+  padding: 18px 20px;
+  text-align: center;
+  font-size: 13px;
+  background: #0d0d0d;
+}
+
+.footer-bottom span {
+  color: #00c896;
+  font-weight: 600;
+}
+
+.footer-bottom .footer-links {
+  margin-top: 8px;
+}
+
+.footer-bottom .footer-links a {
+  color: #bbbbbb;
+  margin: 0 8px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.footer-bottom .footer-links a:hover {
+  color: #00c896;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .footer-column h4::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .social-links {
+    margin-top: 15px;
+  }
+}
+
+</style>
+
+
+</body>
+</html>
