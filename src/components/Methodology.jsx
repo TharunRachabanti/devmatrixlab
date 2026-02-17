@@ -4,7 +4,13 @@ import { motion } from "framer-motion";
 
 const Methodology = () => {
     return (
-        <PageTemplate title="Research Methodology" subtitle="PhD Consultancy in Hyderabad" bgImage="/imag/methodology.jpg">
+        <PageTemplate
+            title="Research Methodology"
+            subtitle="PhD Consultancy in Hyderabad"
+            bgImage="/imag/methodology_header_hq.jpg"
+            metaDesc="Expert Research Methodology services for PhD students. Qualitative, Quantitative, and Mixed Methods support in Hyderabad."
+            keywords="Research Methodology, PhD Research, Data Analysis, Qualitative Research, Quantitative Research, Hyderabad, Thesis Methodology"
+        >
 
             <section style={{ marginBottom: "60px", padding: "50px 20px" }}>
                 <div style={{ maxWidth: "1150px", margin: "auto", display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "40px", alignItems: "center" }}>
@@ -29,7 +35,7 @@ const Methodology = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <img src="/imag/research method.jpg" alt="Research Methodology" style={{ width: "100%", borderRadius: "12px", boxShadow: "0 4px 10px rgba(0,0,0,0.08)" }} />
+                        <img src="/imag/methodology_research_hq.jpg" alt="Research Methodology" style={{ width: "100%", borderRadius: "12px", boxShadow: "0 4px 10px rgba(0,0,0,0.08)" }} />
                     </motion.div>
                 </div>
             </section>
@@ -44,7 +50,7 @@ const Methodology = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             transition={{ duration: 0.8 }}
                         >
-                            <img src="/imag/hire.jpg" alt="Hire Research Methodology Experts" style={{ width: "100%", borderRadius: "12px", boxShadow: "0 4px 10px rgba(0,0,0,0.08)" }} />
+                            <img src="/imag/methodology_professional_hq.jpg" alt="Hire Research Methodology Experts" style={{ width: "100%", borderRadius: "12px", boxShadow: "0 4px 10px rgba(0,0,0,0.08)" }} />
                         </motion.div>
 
                         <div style={{ display: "grid", gap: "25px" }}>

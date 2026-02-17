@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaTelegram, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -95,17 +95,10 @@ const Footer = () => {
 
                 <hr style={{ borderColor: "rgba(255, 255, 255, 0.1)", marginBottom: "1.5rem" }} />
 
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", flexWrap: "wrap", gap: "1.5rem" }}>
+                <div style={{ display: "flex", justifyContent: "center", alignItems: "center", flexWrap: "wrap", gap: "1.5rem" }}>
                     <p style={{ color: "rgba(255, 255, 255, 0.6)", fontSize: "0.9375rem" }}>
                         &copy; {new Date().getFullYear()} DevMatrixLab. All Rights Reserved.
                     </p>
-                    <div style={{ display: "flex", gap: "1rem" }}>
-                        <a href="#" className="social-icon" aria-label="Facebook"><FaFacebook /></a>
-                        <a href="#" className="social-icon" aria-label="Twitter"><FaTwitter /></a>
-                        <a href="#" className="social-icon" aria-label="Instagram"><FaInstagram /></a>
-                        <a href="#" className="social-icon" aria-label="LinkedIn"><FaLinkedin /></a>
-                        <a href="#" className="social-icon" aria-label="Telegram"><FaTelegram /></a>
-                    </div>
                 </div>
             </div>
             <style>{`

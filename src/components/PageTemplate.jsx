@@ -1,10 +1,30 @@
 import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
-const PageTemplate = ({ title, subtitle, bgImage, children }) => {
+const PageTemplate = ({ title, subtitle, bgImage, metaDesc, keywords, children }) => {
     useEffect(() => {
         document.title = `DevMatrix | ${title}`;
-    }, [title]);
+
+        // Update meta description
+        let metaDescription = document.querySelector('meta[name="description"]');
+        if (!metaDescription) {
+            metaDescription = document.createElement('meta');
+            metaDescription.name = "description";
+            document.head.appendChild(metaDescription);
+        }
+        metaDescription.content = metaDesc || "DevMatrixLab - Professional PhD Assistance & Tech Solutions";
+
+        // Update meta keywords
+        let metaKeywords = document.querySelector('meta[name="keywords"]');
+        if (!metaKeywords) {
+            metaKeywords = document.createElement('meta');
+            metaKeywords.name = "keywords";
+            document.head.appendChild(metaKeywords);
+        }
+        metaKeywords.content = keywords || "PhD assistance, thesis writing, research guidance, Hyderabad, DevMatrixLab";
+
+    }, [title, metaDesc, keywords]);
+
     return (
         <div className="page-content">
             {/* Page Header */}

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const ResearchProposal = () => {
     return (
-        <PageTemplate title="Research Proposal" subtitle="PhD Consultancy in Hyderabad | Research, Journal Publication, and AI-driven Guidance" bgImage="/imag/research-proposal-writing.jpg">
+        <PageTemplate title="Research Proposal" subtitle="PhD Consultancy in Hyderabad | Research, Journal Publication, and AI-driven Guidance" bgImage="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?q=80&w=2070&auto=format&fit=crop">
 
             <section style={{ marginBottom: "60px", background: "linear-gradient(135deg, #f0fdfa, #ecfdf5)", padding: "80px 20px" }}>
                 <div style={{ maxWidth: "1200px", margin: "auto", textAlign: "center" }}>
@@ -102,7 +102,7 @@ const ResearchProposal = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <img src="/imag/res2.jpg" alt="Research Proposal Format" style={{ width: "100%", borderRadius: "12px", boxShadow: "0 6px 15px rgba(0,0,0,0.1)" }} />
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?q=80&w=2070&auto=format&fit=crop" alt="Research Proposal Format" style={{ width: "100%", borderRadius: "12px", boxShadow: "0 6px 15px rgba(0,0,0,0.1)" }} />
                     </motion.div>
 
                     <motion.div

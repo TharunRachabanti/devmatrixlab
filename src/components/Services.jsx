@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
     FaUserGraduate, FaLightbulb, FaPen, FaEdit, FaFileAlt,
-    FaBook, FaJournalWhills, FaGlobe, FaClipboardList
+    FaBook, FaJournalWhills, FaGlobe, FaClipboardList, FaCode, FaRobot
 } from "react-icons/fa";
 
 const Services = () => {
@@ -78,6 +78,22 @@ const Services = () => {
             link: "/services/research-proposal",
             color: "#0a4d4e",
             image: "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=800&q=80"
+        },
+        {
+            title: "A-Z Development",
+            icon: FaCode,
+            desc: "Complete end-to-end software development services from concept to deployment for research projects.",
+            link: "/a-z-development",
+            color: "#1a7f7f",
+            image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=800&q=80"
+        },
+        {
+            title: "AI Plagiarism Reduction",
+            icon: FaRobot,
+            desc: "Advanced AI-powered plagiarism detection and reduction services ensuring 100% original content.",
+            link: "/services/plagiarism-reduction",
+            color: "#6ab800",
+            image: "https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=800&q=80"
         },
     ];
 

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Implementation = () => {
     return (
-        <PageTemplate title="Implementation Service in Hyderabad" subtitle="Welcome to DevMatrixLab" bgImage="/imag/implemantation.123.jpg">
+        <PageTemplate title="Implementation Service in Hyderabad" subtitle="Welcome to DevMatrixLab" bgImage="/imag/implementation_hq.jpg">
 
             <section style={{ marginBottom: "60px", background: "#f9fdfc", padding: "60px 20px", borderRadius: "12px" }}>
                 <h2 style={{ textAlign: "center", fontSize: "2rem", fontWeight: "bold", color: "#333", marginBottom: "40px" }}>Why Choose <span style={{ color: "#009688" }}>Implementation Services?</span></h2>

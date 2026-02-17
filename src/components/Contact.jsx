@@ -1,8 +1,49 @@
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane } from "react-icons/fa";
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaPaperPlane, FaCheckCircle, FaExclamationCircle } from "react-icons/fa";
 
 const Contact = () => {
+    const [formStatus, setFormStatus] = useState({ type: '', message: '' });
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+        setFormStatus({ type: '', message: '' });
+
+        const form = e.target;
+        const formData = new FormData(form);
+
+        try {
+            const response = await fetch('https://formspree.io/f/xvzbrndo', {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            if (response.ok) {
+                setFormStatus({
+                    type: 'success',
+                    message: '✓ Message sent successfully! We\'ll get back to you soon.'
+                });
+                form.reset();
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            console.error('Formspree Error:', error);
+            setFormStatus({
+                type: 'error',
+                message: '✗ Failed to send message. Please try again or email us directly at devmatrixlab@gmail.com'
+            });
+        } finally {
+            setIsSubmitting(false);
+            setTimeout(() => setFormStatus({ type: '', message: '' }), 5000);
+        }
+    };
+
     return (
         <section name="contact" className="section-padding" style={{
             position: "relative",
@@ -55,7 +96,7 @@ const Contact = () => {
                             boxShadow: "var(--shadow-lg)",
                             border: "1px solid var(--border-light)"
                         }}
-                        onSubmit={(e) => e.preventDefault()}
+                        onSubmit={handleSubmit}
                     >
                         <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
                             <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))", gap: "1rem" }}>
@@ -71,6 +112,7 @@ const Contact = () => {
                                     </label>
                                     <input
                                         type="text"
+                                        name="name"
                                         placeholder="Enter your Name"
                                         required
                                         style={{
@@ -105,6 +147,7 @@ const Contact = () => {
                                     </label>
                                     <input
                                         type="email"
+                                        name="email"
                                         placeholder="example@gmail.com"
                                         required
                                         style={{
@@ -141,6 +184,7 @@ const Contact = () => {
                                 </label>
                                 <input
                                     type="text"
+                                    name="subject"
                                     placeholder="How can we help you?"
                                     required
                                     style={{
@@ -176,6 +220,7 @@ const Contact = () => {
                                 </label>
                                 <textarea
                                     rows="6"
+                                    name="message"
                                     placeholder="Tell us about your research goals..."
                                     required
                                     style={{
@@ -200,12 +245,38 @@ const Contact = () => {
                                 ></textarea>
                             </div>
 
+                            {/* Status Message */}
+                            {formStatus.message && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: -10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    style={{
+                                        padding: "1rem",
+                                        borderRadius: "var(--radius-md)",
+                                        background: formStatus.type === 'success' ? '#d4edda' : '#f8d7da',
+                                        color: formStatus.type === 'success' ? '#155724' : '#721c24',
+                                        border: `1px solid ${formStatus.type === 'success' ? '#c3e6cb' : '#f5c6cb'}`,
+                                        display: "flex",
+                                        alignItems: "center",
+                                        gap: "0.5rem"
+                                    }}
+                                >
+                                    {formStatus.type === 'success' ? <FaCheckCircle /> : <FaExclamationCircle />}
+                                    <span>{formStatus.message}</span>
+                                </motion.div>
+                            )}
+
                             <button
                                 className="btn btn-success btn-block"
                                 type="submit"
+                                disabled={isSubmitting}
+                                style={{
+                                    opacity: isSubmitting ? 0.7 : 1,
+                                    cursor: isSubmitting ? 'not-allowed' : 'pointer'
+                                }}
                             >
                                 <FaPaperPlane />
-                                Send Message
+                                {isSubmitting ? 'Sending...' : 'Send Message'}
                             </button>
                         </div>
                     </motion.form>

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const ResearchPaper = () => {
     return (
-        <PageTemplate title="Research Paper Writing" subtitle="PhD Consultancy in Hyderabad" bgImage="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop">
+        <PageTemplate title="Research Paper Writing" subtitle="PhD Consultancy in Hyderabad" bgImage="/imag/research_paper_hq.jpg">
 
             <section style={{ marginBottom: "60px" }}>
                 <h2 style={{ color: "#008080", textAlign: "center", marginBottom: "20px", fontSize: "2rem" }}>Why Choose DevMatrixLab for Research Papers?</h2>
@@ -52,7 +52,7 @@ const ResearchPaper = () => {
                     making your work stand out with clarity and credibility.
                 </p>
                 <div style={{ display: "flex", justifyContent: "center" }}>
-                    <img src="https://images.unsplash.com/photo-1507733596654-35726ca6c17c?q=80&w=2070&auto=format&fit=crop" alt="Research Services" style={{ width: "100%", maxWidth: "600px", borderRadius: "10px", boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }} />
+                    <img src="/imag/research%20service.jpg" alt="Research Services" style={{ width: "100%", maxWidth: "600px", borderRadius: "10px", boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }} />
                 </div>
             </section>
 

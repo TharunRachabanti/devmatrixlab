@@ -5,7 +5,7 @@ import { FaAward, FaBookOpen, FaShieldAlt, FaHeadset, FaLock, FaSearch, FaFileAl
 
 const ScopusJournals = () => {
     return (
-        <PageTemplate title="Scopus indexed journal" subtitle="PhD Consultancy in Hyderabad | Research, Journal Publication, and AI-driven Guidance" bgImage="/imag/scopus-indexed.jpg">
+        <PageTemplate title="Scopus indexed journal" subtitle="PhD Consultancy in Hyderabad | Research, Journal Publication, and AI-driven Guidance" bgImage="/imag/scopus_journal_hq.jpg">
 
             <section style={{ marginBottom: "60px", background: "#f8fdf9", padding: "60px 20px" }}>
                 <div style={{ maxWidth: "1100px", margin: "auto" }}>

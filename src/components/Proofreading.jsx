@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Proofreading = () => {
     return (
-        <PageTemplate title="Proofreading Service" subtitle="PhD Consultancy in Hyderabad | Research, Journal Publication, and AI-driven Guidance" bgImage="/imag/proofreading.index4.jpg">
+        <PageTemplate title="Proofreading Service" subtitle="PhD Consultancy in Hyderabad | Research, Journal Publication, and AI-driven Guidance" bgImage="/imag/proofreading_hq.jpg">
 
             <section style={{ marginBottom: "60px", background: "#f9fdfc", padding: "60px 20px", borderRadius: "12px" }}>
                 <h2 style={{ textAlign: "center", fontSize: "2rem", fontWeight: "bold", color: "#333", marginBottom: "40px" }}>Why Choose <span style={{ color: "#009688" }}>Professional Proofreading?</span></h2>

@@ -3,6 +3,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaTimes, FaPhoneAlt, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaChevronDown, FaArrowRight } from "react-icons/fa";
+import { SiThreads } from "react-icons/si";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -124,41 +125,48 @@ const Navbar = () => {
           <div style={{ display: "flex", gap: "15px", alignItems: "center" }}>
             {[
               { icon: FaFacebook, href: "#", label: "Facebook" },
-              { icon: FaTwitter, href: "#", label: "Twitter" },
               { icon: FaInstagram, href: "#", label: "Instagram" },
-              { icon: FaLinkedin, href: "#", label: "LinkedIn" }
-            ].map((social, idx) => (
-              <a
-                key={idx}
-                href={social.href}
-                aria-label={social.label}
-                style={{
-                  color: "white",
-                  fontSize: "15px",
-                  transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
-                  opacity: 0.9,
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  width: "32px",
-                  height: "32px",
-                  borderRadius: "50%",
-                  background: "rgba(255, 255, 255, 0.1)"
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.opacity = "1";
-                  e.currentTarget.style.transform = "translateY(-3px) scale(1.1)";
-                  e.currentTarget.style.background = "rgba(255, 255, 255, 0.2)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.opacity = "0.9";
-                  e.currentTarget.style.transform = "translateY(0) scale(1)";
-                  e.currentTarget.style.background = "rgba(255, 255, 255, 0.1)";
-                }}
-              >
-                <social.icon />
-              </a>
-            ))}
+              { icon: SiThreads, href: "#", label: "Threads" }
+            ].map((social, idx) => {
+              let href = social.href;
+              if (social.label === "Facebook") href = "https://www.facebook.com/devmatrixlab";
+              if (social.label === "Instagram") href = "https://www.instagram.com/devmatrixlab/";
+              if (social.label === "Threads") href = "https://www.threads.com/@devmatrixlab";
+              return (
+                <a
+                  key={idx}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={social.label}
+                  style={{
+                    color: "white",
+                    fontSize: "15px",
+                    transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                    opacity: 0.9,
+                    display: "flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    width: "32px",
+                    height: "32px",
+                    borderRadius: "50%",
+                    background: "rgba(255, 255, 255, 0.1)"
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.opacity = "1";
+                    e.currentTarget.style.transform = "translateY(-3px) scale(1.1)";
+                    e.currentTarget.style.background = "rgba(255, 255, 255, 0.2)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.opacity = "0.9";
+                    e.currentTarget.style.transform = "translateY(0) scale(1)";
+                    e.currentTarget.style.background = "rgba(255, 255, 255, 0.1)";
+                  }}
+                >
+                  <social.icon />
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -196,7 +204,7 @@ const Navbar = () => {
             onMouseLeave={(e) => e.currentTarget.style.transform = "scale(1)"}
           >
             <img
-              src="/imag/devmatrixlab.png"
+              src="/imag/devmatrixlab_new_logo.png"
               alt="DevMatrixLab"
               style={{
                 height: scrolled ? "clamp(36px, 8vw, 48px)" : "clamp(42px, 10vw, 58px)",

@@ -77,7 +77,7 @@ const AZDevelopment = () => {
         <PageTemplate
             title="Welcome to A-Z Development"
             subtitle="Your Trusted Partner for End-to-End IT Solutions"
-            bgImage="/imag/a-to-z-development.png"
+            bgImage="/imag/az_development_hq.jpg"
         >
             {/* About Section */}
             <section style={{ marginBottom: "60px", padding: "80px 20px", background: "#f2f5f3" }}>
@@ -89,7 +89,7 @@ const AZDevelopment = () => {
                         style={{ flex: "1 1 500px", textAlign: "center" }}
                     >
                         <img
-                            src="/imag/development1.jpg"
+                            src="/imag/az_development_about_hq.jpg"
                             alt="DevMatrixLab Development"
                             style={{ width: "100%", maxWidth: "550px", borderRadius: "20px", boxShadow: "0 20px 40px rgba(0,0,0,0.15)" }}
                         />

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const JournalPublication = () => {
     return (
-        <PageTemplate title="Journal Paper Publication" subtitle="SCI & Scopus Indexed | Peer-Reviewed | End-to-End Publication Support" bgImage="/imag/journal-paper-publication.jpg">
+        <PageTemplate title="Journal Paper Publication" subtitle="SCI & Scopus Indexed | Peer-Reviewed | End-to-End Publication Support" bgImage="/imag/journal_publication_hq.jpg">
 
             <section style={{ marginBottom: "60px", padding: "60px 20px" }}>
                 <div style={{ maxWidth: "1000px", margin: "auto", textAlign: "center" }}>
@@ -13,7 +13,7 @@ const JournalPublication = () => {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 style={{ fontSize: "2.5rem", marginBottom: "20px", color: "#13f191", fontWeight: "bold" }}>Journal Paper Publication Services by DevMatrixLab</h2>
+                        <h2 style={{ fontSize: "2.5rem", marginBottom: "20px", color: "#6ab800", fontWeight: "bold" }}>Journal Paper Publication Services by DevMatrixLab</h2>
                         <p style={{ fontSize: "1.2rem", maxWidth: "800px", margin: "0 auto 40px", lineHeight: "1.6", color: "#555" }}>
                             Turning your research into a published paper is more than having strong results—it's about presenting your work with clarity, precision, and in line with journal requirements.
                         </p>
@@ -25,7 +25,7 @@ const JournalPublication = () => {
                         transition={{ delay: 0.3, duration: 0.8 }}
                         style={{ textAlign: "justify", fontSize: "1.1rem", color: "#444", lineHeight: "1.7" }}
                     >
-                        <h3 style={{ fontSize: "2rem", color: "#13f191", marginBottom: "20px", textAlign: "center" }}>Why Publish with DevMatrixLab?</h3>
+                        <h3 style={{ fontSize: "2rem", color: "#6ab800", marginBottom: "20px", textAlign: "center" }}>Why Publish with DevMatrixLab?</h3>
                         <p style={{ marginBottom: "15px" }}>
                             At DevMatrixLab, we assist you throughout the entire publication journey, ensuring your manuscript meets global quality standards and attracts reviewers' attention.
                         </p>
