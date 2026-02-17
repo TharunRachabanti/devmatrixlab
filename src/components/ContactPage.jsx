@@ -4,7 +4,7 @@ import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaWhatsapp } from "react-icons/fa"
 
 const ContactPage = () => {
     return (
-        <PageTemplate title="Contact Us" subtitle="PhD Consultancy in Hyderabad | Research, Journal Publication, and AI-driven Guidance" bgImage="/imag/Black and White Minimalist Coffee Presentation.png">
+        <PageTemplate title="Contact Us" subtitle="PhD Consultancy in Hyderabad | Research, Journal Publication, and AI-driven Guidance" bgImage="/imag/contact-banner.png">
 
             <section style={{ padding: "50px 20px", background: "#f9fff9" }}>
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "30px", maxWidth: "1200px", margin: "0 auto", alignItems: "start" }}>

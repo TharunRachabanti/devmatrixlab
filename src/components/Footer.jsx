@@ -1,5 +1,5 @@
 import React from "react";
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube, FaTelegram, FaMapMarkerAlt, FaPhone, FaEnvelope } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaTelegram, FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Footer = () => {
     return (
@@ -11,12 +11,7 @@ const Footer = () => {
             borderTop: "3px solid var(--accent-color)"
         }}>
             <div className="container">
-                <div style={{
-                    display: "grid",
-                    gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-                    gap: "clamp(2rem, 4vw, 3rem)",
-                    marginBottom: "3rem"
-                }}>
+                <div className="footer-grid">
                     {/* Column 1: About */}
                     <div>
                         <h3 style={{
@@ -34,9 +29,10 @@ const Footer = () => {
                         <p style={{
                             color: "rgba(255, 255, 255, 0.8)",
                             lineHeight: "1.8",
-                            fontSize: "1rem"
+                            fontSize: "1rem",
+                            textAlign: "justify"
                         }}>
-                            We are one of the top organizations contributing to PhD Thesis writing services in India. Our legacy is built on results, relationships, and relentless improvement.
+                            We are a premier research consultancy dedicated to empowering scholars with comprehensive academic support. From topic selection to final publication, our legacy is built on excellence, integrity, and your research success.
                         </p>
                     </div>
 
@@ -79,12 +75,16 @@ const Footer = () => {
                             Contact Us
                         </h3>
                         <div style={{ display: "flex", alignItems: "flex-start", gap: "0.75rem", marginBottom: "1rem", color: "rgba(255, 255, 255, 0.8)" }}>
-                            <FaMapMarkerAlt style={{ color: "var(--highlight-color)", marginTop: "5px", fontSize: "1.125rem" }} />
-                            <span style={{ fontSize: "0.9375rem" }}>Beside AAA Mall, upside of Bata ShowRoom, Ameerpet, Hyderabad, Telangana-500016</span>
+                            <FaMapMarkerAlt style={{ color: "var(--highlight-color)", marginTop: "5px", fontSize: "1.125rem", flexShrink: 0 }} />
+                            <div style={{ fontSize: "0.9375rem" }}>
+                                <p style={{ marginBottom: "10px" }}><strong>HEAD OFFICE:</strong><br />Beside AAA Mall, upside of Bata ShowRoom, Ameerpet, Hyderabad, Telangana-500016</p>
+                                <p style={{ marginBottom: "10px" }}><strong>OFFICE 2:</strong><br />beside marina mall, near toll plaz, navalur, chennai, Tamil Nadu</p>
+                                <p><strong>OFFICE 3:</strong><br />Beside of Guntur Bus Stop, Guntur, Andhra Pradesh</p>
+                            </div>
                         </div>
                         <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", marginBottom: "1rem", color: "rgba(255, 255, 255, 0.8)" }}>
-                            <FaPhone style={{ color: "var(--highlight-color)", fontSize: "1.125rem" }} />
-                            <a href="tel:+917207494254" className="footer-link">+91 7207494254</a>
+                            <FaPhoneAlt style={{ color: "var(--highlight-color)", fontSize: "1.125rem" }} />
+                            <a href="tel:+919347967147" className="footer-link">+91 9347967147</a>
                         </div>
                         <div style={{ display: "flex", alignItems: "center", gap: "0.75rem", color: "rgba(255, 255, 255, 0.8)" }}>
                             <FaEnvelope style={{ color: "var(--highlight-color)", fontSize: "1.125rem" }} />
@@ -104,33 +104,34 @@ const Footer = () => {
                         <a href="#" className="social-icon" aria-label="Twitter"><FaTwitter /></a>
                         <a href="#" className="social-icon" aria-label="Instagram"><FaInstagram /></a>
                         <a href="#" className="social-icon" aria-label="LinkedIn"><FaLinkedin /></a>
-                        <a href="#" className="social-icon" aria-label="YouTube"><FaYoutube /></a>
                         <a href="#" className="social-icon" aria-label="Telegram"><FaTelegram /></a>
                     </div>
                 </div>
             </div>
             <style>{`
+                .footer-grid {
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                    gap: clamp(2rem, 4vw, 3rem);
+                    margin-bottom: 3rem;
+                }
+                
+                @media (min-width: 1024px) {
+                    .footer-grid {
+                        grid-template-columns: 1.5fr 0.6fr 1.2fr;
+                        gap: 2rem;
+                    }
+                }
+
                 .footer-link {
                     color: rgba(255, 255, 255, 0.8);
                     transition: all var(--transition-fast);
                     display: inline-block;
                     position: relative;
-                }
-                .footer-link::after {
-                    content: '';
-                    position: absolute;
-                    bottom: -2px;
-                    left: 0;
-                    width: 0;
-                    height: 2px;
-                    background: var(--gradient-accent);
-                    transition: width var(--transition-normal);
+                    text-decoration: none;
                 }
                 .footer-link:hover {
                     color: var(--highlight-color);
-                }
-                .footer-link:hover::after {
-                    width: 100%;
                 }
                 .social-icon {
                     color: rgba(255, 255, 255, 0.8);

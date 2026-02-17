@@ -94,6 +94,19 @@ const Assignment = () => {
                 </div>
             </section>
 
+            {/* Online Assignment Help */}
+            <section style={{ padding: "60px 20px", background: "#f9f9f9", textAlign: "center", marginBottom: "60px" }}>
+                <div style={{ maxWidth: "1000px", margin: "0 auto" }}>
+                    <h2 style={{ fontSize: "2rem", fontWeight: "900", marginBottom: "20px", color: "#001f3f" }}>Online Assignment Help</h2>
+                    <p style={{ fontSize: "16px", marginBottom: "30px", textAlign: "justify", color: "#333", lineHeight: "1.7" }}>
+                        In today's digital learning environment, online assignments, quizzes, and timed assessments are increasingly common.
+                        <strong>DevMatrixLab</strong> offers specialized support for online coursework, ensuring you meet technical requirements
+                        and submit high-quality work within tight deadlines. Whether it's a virtual lab, a coding challenge, or a comprehensive
+                        online exam, our experts are equipped to guide you through every step, helping you achieve top grades with confidence.
+                    </p>
+                </div>
+            </section>
+
             {/* About Us Section */}
             <section style={{ padding: "60px 20px", background: "#fff", textAlign: "center", marginBottom: "60px" }}>
                 <div style={{ maxWidth: "1000px", margin: "0 auto" }}>

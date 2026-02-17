@@ -30,6 +30,9 @@ import AZDevelopment from './components/AZDevelopment';
 import ResearchTopics from './components/ResearchTopics';
 import WhyDevMatrixLab from './components/WhyDevMatrixLab';
 import ContactPage from './components/ContactPage';
+import PlagiarismReduction from './components/PlagiarismReduction';
+
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 // Layout Component
 const Layout = ({ children }) => {
@@ -40,6 +43,7 @@ const Layout = ({ children }) => {
         {children}
       </div>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 };
@@ -63,18 +67,24 @@ const ScrollToTop = () => {
   return null;
 };
 
-const Home = () => (
-  <>
-    <Hero />
-    <div id="about"></div>
-    <Services />
-    <Testimonials />
-    <Team />
-    <WhyChooseUs />
-    <FAQ />
-    <Contact />
-  </>
-);
+const Home = () => {
+  useEffect(() => {
+    document.title = "DevMatrixLab | Professional PhD Assistance & Tech Solutions";
+  }, []);
+
+  return (
+    <>
+      <Hero />
+      <div id="about"></div>
+      <Services />
+      <Testimonials />
+      <Team />
+      <WhyChooseUs />
+      <FAQ />
+      <Contact />
+    </>
+  );
+};
 
 function App() {
   useEffect(() => {
@@ -116,6 +126,7 @@ function App() {
           {/* Journal Routes */}
           <Route path="/journal/sci" element={<SCIJournals />} />
           <Route path="/journal/scopus" element={<ScopusJournals />} />
+          <Route path="/services/plagiarism-reduction" element={<PlagiarismReduction />} />
 
         </Routes>
       </Layout>

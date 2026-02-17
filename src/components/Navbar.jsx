@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link as ScrollLink } from "react-scroll";
 import { Link as RouterLink, useLocation, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { FaBars, FaTimes, FaPhone, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube, FaChevronDown, FaArrowRight } from "react-icons/fa";
+import { FaBars, FaTimes, FaPhoneAlt, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaChevronDown, FaArrowRight } from "react-icons/fa";
 
 const Navbar = () => {
   const [nav, setNav] = useState(false);
@@ -47,6 +47,8 @@ const Navbar = () => {
     { name: "Literature Review", path: "/services/literature-review" },
     { name: "Methodology", path: "/services/methodology" },
     { name: "Research Proposal", path: "/services/research-proposal" },
+    { name: "Plagiarism Reduction", path: "/services/plagiarism-reduction" },
+    { name: "A-Z Development", path: "/a-z-development" },
   ];
 
   const journalLinks = [
@@ -96,7 +98,7 @@ const Navbar = () => {
               <FaEnvelope style={{ fontSize: "13px" }} />
               <span>devmatrixlab@gmail.com</span>
             </a>
-            <a href="tel:+917207494254" style={{
+            <a href="tel:+919347967147" style={{
               display: "flex",
               alignItems: "center",
               gap: "8px",
@@ -115,8 +117,8 @@ const Navbar = () => {
                 e.currentTarget.style.transform = "translateX(0)";
               }}
             >
-              <FaPhone style={{ fontSize: "13px" }} />
-              <span>+91 7207494254</span>
+              <FaPhoneAlt style={{ fontSize: "13px" }} />
+              <span>+91 9347967147</span>
             </a>
           </div>
           <div style={{ display: "flex", gap: "15px", alignItems: "center" }}>
@@ -124,8 +126,7 @@ const Navbar = () => {
               { icon: FaFacebook, href: "#", label: "Facebook" },
               { icon: FaTwitter, href: "#", label: "Twitter" },
               { icon: FaInstagram, href: "#", label: "Instagram" },
-              { icon: FaLinkedin, href: "#", label: "LinkedIn" },
-              { icon: FaYoutube, href: "#", label: "YouTube" }
+              { icon: FaLinkedin, href: "#", label: "LinkedIn" }
             ].map((social, idx) => (
               <a
                 key={idx}
@@ -249,9 +250,9 @@ const Navbar = () => {
               <AnimatePresence>
                 {servicesDropdown && (
                   <motion.ul
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 15 }}
+                    initial={{ opacity: 0, y: 15, x: "-50%" }}
+                    animate={{ opacity: 1, y: 0, x: "-50%" }}
+                    exit={{ opacity: 0, y: 15, x: "-50%" }}
                     transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
                     className="premium-dropdown"
                   >
@@ -296,9 +297,9 @@ const Navbar = () => {
               <AnimatePresence>
                 {journalDropdown && (
                   <motion.ul
-                    initial={{ opacity: 0, y: 15 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    exit={{ opacity: 0, y: 15 }}
+                    initial={{ opacity: 0, y: 15, x: "-50%" }}
+                    animate={{ opacity: 1, y: 0, x: "-50%" }}
+                    exit={{ opacity: 0, y: 15, x: "-50%" }}
                     transition={{ duration: 0.25, ease: [0.4, 0, 0.2, 1] }}
                     className="premium-dropdown"
                   >
@@ -323,6 +324,7 @@ const Navbar = () => {
             </li>
 
             <li><RouterLink to="/projects" className="premium-nav-link">Projects</RouterLink></li>
+            <li><RouterLink to="/assignment" className="premium-nav-link">Assignment</RouterLink></li>
             <li><RouterLink to="/why-devmatrixlab" className="premium-nav-link">Why Us</RouterLink></li>
 
             {/* Premium CTA Button */}
@@ -461,6 +463,7 @@ const Navbar = () => {
                     </AnimatePresence>
                   </li>
                   <li><RouterLink to="/projects" className="premium-mobile-link">Projects</RouterLink></li>
+                  <li><RouterLink to="/assignment" className="premium-mobile-link">Assignment</RouterLink></li>
                   <li><RouterLink to="/why-devmatrixlab" className="premium-mobile-link">Why Us</RouterLink></li>
                   <li style={{ marginTop: "8px" }}>
                     <RouterLink to="/contact" className="premium-mobile-cta">

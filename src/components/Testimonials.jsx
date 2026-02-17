@@ -390,14 +390,14 @@ const Testimonials = () => {
                 .swiper-button-prev {
                     color: var(--accent-color);
                     background: white;
-                    width: 45px;
-                    height: 45px;
+                    width: 35px;
+                    height: 35px;
                     border-radius: 50%;
                     box-shadow: var(--shadow-md);
                 }
                 .swiper-button-next:after,
                 .swiper-button-prev:after {
-                    font-size: 18px;
+                    font-size: 14px;
                 }
                 .swiper-pagination-bullet {
                     width: 10px;

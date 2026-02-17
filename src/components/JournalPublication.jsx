@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const JournalPublication = () => {
     return (
-        <PageTemplate title="Journal Paper Publication" subtitle="SCI & Scopus Indexed | Peer-Reviewed | End-to-End Publication Support" bgImage="/imag/journal paper publication.jpg">
+        <PageTemplate title="Journal Paper Publication" subtitle="SCI & Scopus Indexed | Peer-Reviewed | End-to-End Publication Support" bgImage="/imag/journal-paper-publication.jpg">
 
             <section style={{ marginBottom: "60px", padding: "60px 20px" }}>
                 <div style={{ maxWidth: "1000px", margin: "auto", textAlign: "center" }}>

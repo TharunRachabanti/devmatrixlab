@@ -13,7 +13,7 @@ const Services = () => {
             desc: "Expert guidance for PhD admission, helping you select the right program and streamline the application process.",
             link: "/contact",
             color: "#0a4d4e",
-            image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=800&q=80"
+            image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=800&auto=format&fit=crop"
         },
         {
             title: "Topic Selection",

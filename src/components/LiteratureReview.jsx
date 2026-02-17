@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const LiteratureReview = () => {
     return (
-        <PageTemplate title="Literature Review Service" subtitle="PhD Consultancy in Hyderabad" bgImage="/imag/Literature review ser.png">
+        <PageTemplate title="Literature Review Service" subtitle="PhD Consultancy in Hyderabad" bgImage="/imag/literature-review-research.png">
 
             <section style={{ marginBottom: "60px", background: "linear-gradient(135deg, #f4f9f8, #eafaf7)", padding: "60px 20px", borderRadius: "12px" }}>
                 <h2 style={{ textAlign: "center", fontSize: "2.4rem", fontWeight: "700", color: "#008080", marginBottom: "50px", letterSpacing: "1px" }}>Literature Review Services</h2>

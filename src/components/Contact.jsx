@@ -71,7 +71,7 @@ const Contact = () => {
                                     </label>
                                     <input
                                         type="text"
-                                        placeholder="John Doe"
+                                        placeholder="Enter your Name"
                                         required
                                         style={{
                                             width: "100%",
@@ -105,7 +105,7 @@ const Contact = () => {
                                     </label>
                                     <input
                                         type="email"
-                                        placeholder="john@example.com"
+                                        placeholder="example@gmail.com"
                                         required
                                         style={{
                                             width: "100%",
@@ -241,8 +241,8 @@ const Contact = () => {
                                 {
                                     icon: FaPhone,
                                     title: "Call Us",
-                                    info: "+91 7207494254",
-                                    link: "tel:+917207494254"
+                                    info: "+91 9347967147",
+                                    link: "tel:+919347967147"
                                 },
                                 {
                                     icon: FaEnvelope,

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-scroll";
+import { Link as RouterLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { FaArrowDown, FaGraduationCap, FaAward, FaUsers } from "react-icons/fa";
 
@@ -106,7 +107,7 @@ const Hero = () => {
                                 letterSpacing: "-0.02em"
                             }}
                         >
-                            Welcome to{" "}
+                            DevMatrixLab{" "}
                             <span style={{
                                 background: "var(--gradient-accent)",
                                 WebkitBackgroundClip: "text",
@@ -114,7 +115,7 @@ const Hero = () => {
                                 backgroundClip: "text",
                                 display: "inline-block"
                             }}>
-                                DevMatrixLab
+                                PhD Consultancy
                             </span>
                         </motion.h1>
 
@@ -280,42 +281,45 @@ const Hero = () => {
                             <div style={{ fontSize: "0.8125rem", color: "rgba(255, 255, 255, 0.85)", fontWeight: "500" }}>Active Clients</div>
                         </motion.div>
 
-                        {/* Link to Samples */}
-                        <motion.a
-                            href="#projects"
+                        <motion.div
                             initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 2.2, duration: 0.6 }}
                             whileHover={{ scale: 1.05, y: -2 }}
-                            style={{
-                                display: "flex",
-                                alignItems: "center",
-                                justifyContent: "center",
-                                gap: "0.5rem",
-                                background: "rgba(106, 184, 0, 0.2)",
-                                backdropFilter: "blur(15px)",
-                                padding: "0.875rem 1.25rem",
-                                borderRadius: "var(--radius-md)",
-                                border: "1px solid rgba(106, 184, 0, 0.4)",
-                                textDecoration: "none",
-                                color: "white",
-                                fontSize: "0.875rem",
-                                fontWeight: "600",
-                                transition: "all 0.3s ease",
-                                animation: "float 6s ease-in-out infinite 3s"
-                            }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.background = "rgba(106, 184, 0, 0.3)";
-                                e.currentTarget.style.borderColor = "rgba(106, 184, 0, 0.6)";
-                            }}
-                            onMouseLeave={(e) => {
-                                e.currentTarget.style.background = "rgba(106, 184, 0, 0.2)";
-                                e.currentTarget.style.borderColor = "rgba(106, 184, 0, 0.4)";
-                            }}
                         >
-                            <span>Go to Sample Work</span>
-                            <FaArrowDown style={{ fontSize: "0.75rem", transform: "rotate(-90deg)" }} />
-                        </motion.a>
+                            <RouterLink
+                                to="/projects"
+                                style={{
+                                    display: "flex",
+                                    alignItems: "center",
+                                    justifyContent: "center",
+                                    gap: "0.5rem",
+                                    background: "rgba(106, 184, 0, 0.2)",
+                                    backdropFilter: "blur(15px)",
+                                    padding: "0.875rem 1.25rem",
+                                    borderRadius: "var(--radius-md)",
+                                    border: "1px solid rgba(106, 184, 0, 0.4)",
+                                    textDecoration: "none",
+                                    color: "white",
+                                    fontSize: "0.875rem",
+                                    fontWeight: "600",
+                                    transition: "all 0.3s ease",
+                                    animation: "float 6s ease-in-out infinite 3s",
+                                    cursor: "pointer"
+                                }}
+                                onMouseEnter={(e) => {
+                                    e.currentTarget.style.background = "rgba(106, 184, 0, 0.3)";
+                                    e.currentTarget.style.borderColor = "rgba(106, 184, 0, 0.6)";
+                                }}
+                                onMouseLeave={(e) => {
+                                    e.currentTarget.style.background = "rgba(106, 184, 0, 0.2)";
+                                    e.currentTarget.style.borderColor = "rgba(106, 184, 0, 0.4)";
+                                }}
+                            >
+                                <span>Go to Sample Work</span>
+                                <FaArrowDown style={{ fontSize: "0.75rem", transform: "rotate(-90deg)" }} />
+                            </RouterLink>
+                        </motion.div>
                     </motion.div>
 
 

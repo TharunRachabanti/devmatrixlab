@@ -59,7 +59,7 @@ const Projects = () => {
     const toggleFaq = (index) => setOpenFaq(openFaq === index ? null : index);
 
     return (
-        <PageTemplate title="Projects" subtitle="Projects Consultancy in Hyderabad | Research, Journal Publication, and AI-driven Guidance" bgImage="/imag/projects.jpg">
+        <PageTemplate title="Projects" subtitle="Projects Consultancy in Hyderabad | Research, Journal Publication, and AI-driven Guidance" bgImage="/imag/tech-projects-banner.png">
 
             <section className="section-padding" style={{ background: "var(--surface-light)" }}>
                 <div className="container">

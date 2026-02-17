@@ -5,7 +5,7 @@ import { FaBookOpen, FaPenFancy, FaListAlt, FaEnvelopeOpenText, FaComments, FaCh
 
 const SCIJournals = () => {
     return (
-        <PageTemplate title="SCI Indexed Journal" subtitle="PhD Consultancy in Hyderabad" bgImage="/imag/sci indexed.jpg">
+        <PageTemplate title="SCI Indexed Journal" subtitle="PhD Consultancy in Hyderabad" bgImage="/imag/sci-indexed.jpg">
 
             <section style={{ marginBottom: "60px", padding: "60px 20px" }}>
                 <div style={{ maxWidth: "1000px", margin: "auto" }}>

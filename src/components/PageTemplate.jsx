@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 
 const PageTemplate = ({ title, subtitle, bgImage, children }) => {
+    useEffect(() => {
+        document.title = `DevMatrix | ${title}`;
+    }, [title]);
     return (
         <div className="page-content">
             {/* Page Header */}

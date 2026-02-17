@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const ResearchProposal = () => {
     return (
-        <PageTemplate title="Research Proposal" subtitle="PhD Consultancy in Hyderabad | Research, Journal Publication, and AI-driven Guidance" bgImage="/imag/Research proposal writing.jpg">
+        <PageTemplate title="Research Proposal" subtitle="PhD Consultancy in Hyderabad | Research, Journal Publication, and AI-driven Guidance" bgImage="/imag/research-proposal-writing.jpg">
 
             <section style={{ marginBottom: "60px", background: "linear-gradient(135deg, #f0fdfa, #ecfdf5)", padding: "80px 20px" }}>
                 <div style={{ maxWidth: "1200px", margin: "auto", textAlign: "center" }}>
